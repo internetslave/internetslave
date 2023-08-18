@@ -3,7 +3,18 @@
     background:black; 
 
 }
-    
-h1 {
-    color: green; 
+
+
+.header-image
+{
+
+
+
+    border-radius: 50%; /* circled img */
+
+    /* scales down if necessary */ 
+    max-width : 100%; 
+    height: auto;
+
+
 }
