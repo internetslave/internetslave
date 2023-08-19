@@ -1,15 +1,23 @@
-:root {
-    background:black; 
+:root 
+{
+    background-color: black; 
 }
 
-.logo
+
+.header  /* parent*/ 
 {
-    display:flex;
+    display:flex; 
+    justify-content: space-between; /* first item - start line, last item-end line*/ 
+    background: #1b1e20; 
+
 }
 
-.header-image
+.logo /* child*/ 
 {
-    border-radius: 50%;
+    display:flex; /*flex box in itself - due to 3 items */ 
+    gap: 10px; /* spacing between flex items */
+    align-items: center; 
+
 }
 
 h1 {
@@ -17,8 +25,24 @@ h1 {
     font-family: monospace;
 }
 
-
-.github-icon
+.header-image
 {
-    position:static; 
+    border-radius: 50%;
+}
+
+
+/* child */ 
+.philosophy-button {
+    font-family: monospace, white; 
+    padding:10px; 
+    background-color: green; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+
+}
+/* Apply shadow when hovering over hero button */
+.philosophy-button:hover {
+    box-shadow: 0 12px 16px 0 var(--hero-button-hover), 0 17px 50px 0 var(--hero-button-hover);
 }
