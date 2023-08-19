@@ -9,14 +9,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--responsiveness-->
 
     <link rel = "stylesheet" href = "CSS/mystyle.css"> 
-     
+
+
     <title> Reflections </title>
 
     <!--Favicon.io-->
     <link rel="icon" type="image/png" href="images/profile.png"/>
 
+
+    <!-- typing.js cdn link-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
 </head>
 
+
+
+<body>
+ 
 
 
 <header> 
@@ -29,9 +37,23 @@
         <!-- logo image-->
             <img src="images/profile.png" alt="internetslave logo" style="width:75px; height:75px"> 
 
-            <h1> internetslave </h1>  <!-- sitename-->  
-
             <a href = "https://github.com/internetslave"> <img src="images/github.png" alt = "github icon" style="width:50px; height:50px"> </a>
+
+
+            <!-- sitename (animated typing affect)-->
+            <div id="typed-text" style="color: green; font-size: 2rem;font-family: monospace; font-weight: 800;"></div>
+            <script>
+               var typed = new Typed('#typed-text', {
+                  strings: ["internetslave"],
+                  typeSpeed: 40,
+                  backSpeed: 10,
+                  loop: true
+              });
+            </script>
+
+
+
+
         </div>
 
 
@@ -48,7 +70,12 @@
 
 </header>
 
-<body>
+
+<div id = "main">
+
+
+</div>
+
 
 
 </body>

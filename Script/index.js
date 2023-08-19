@@ -1,4 +1,23 @@
 
+
+
+//instantiate a typed constructor & create an object
+// & store it in a reference variable
+
+var typed = new Typed();
+
+// pass two parameters to the typed constructor
+// as the id name of the element adn a function with the string text
+// and type speed as typespeed
+var typed = new Typed('#typed-text', {
+  strings: ["Welcome to the tutorials point. There are many different course on our platform. We also provide you with the tutorial for wach and every techcnology.", "incidunt quasi aperiam ipsum dolorum nisi rem inventore error voluptate? Voluptate laborum iure,. Blanditiis corporis expedita temporibus atque sit, molestiae itaque in ullam, ex pariatur incidunt quasi aperiam ipsum dolorum nisi rem inventore error voluptate? Voluptate laborum iure, dolores beatae ratione eos laboriosam velit corrupti unde praesentium quidem, minima qui cumque. Deserunt doloribus modi amet."],
+  typeSpeed: 40,
+  backSpeed: 10,
+  loop: true
+});
+
+
+
 //click event listener to button 
 const btn = document.getElementById('btn');
 

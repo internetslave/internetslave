@@ -3,8 +3,16 @@
     background-color: black; 
 }
 
+.body 
+{
+    display: flex;
+    min-height: 100vh; /* layout takes full height of screen */ 
+    flex-direction: column; /* header, main footer */
+    margin: 0;
+}
 
-.header  /* parent*/ 
+
+.header  /* nested flex container*/ 
 {
     display:flex; 
     justify-content: space-between; /* first item - start line, last item-end line*/ 
@@ -14,7 +22,7 @@
 
 .logo /* child*/ 
 {
-    display:flex; /*flex box in itself - due to 3 items */ 
+    display:flex; /*nested nested flex container */ 
     gap: 10px; /* spacing between flex items */
     align-items: center; 
 
