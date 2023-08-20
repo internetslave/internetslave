@@ -18,7 +18,7 @@
 
 
     <!-- typing.js cdn link-->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
 
 </head>
 
@@ -39,33 +39,21 @@
             <a href = "https://github.com/internetslave"> <img src="images/github.png" alt = "github icon" style="width:50px; height:50px"> </a>
 
 
-            <!-- sitename (animated typing affect)-->
-            <div id="typed-text" style="color: green; font-size: 2rem;font-family: monospace; font-weight: 800;"></div>
-                <script>
-                    var typed = new Typed('#typed-text', 
-                    {
-                        strings: ["internetslave"],
-                        typeSpeed: 40, // add randimization to speed
-                        backSpeed: 10,
-                        loop: true
-                    });
-                </script>
-            
-            <!-- used : https://www.tutorialspoint.com/how-to-create-an-animated-typing-effect-using-typed-js-->
-            <!-- https://stackoverflow.com/questions/30377937/how-to-use-random-typing-speed-animation-using-typed-js-->
-            <!-- add randimization to speed. use css for typing effect instead???-->
+            <div class = "sitename">
+                <h1> internetslave </h1>
+            </div>
 
         </div>
 
 
         <!-- flex item 2(child) -->
         <div class="philosophy-button">
-            <!-- use id attribute to manipulate text with javascript-->
-
-            <!-- the button isn't being styled by css ISSUE-->
-            
+            <!-- use id attribute to manipulate text with javascript-->            
             <button id="btn">Philosophy</button>
             <script src="Script/index.js"></script>
+
+            <!-- the button isn't being styled by css ISSUE-->
+
         </div>
 
 
