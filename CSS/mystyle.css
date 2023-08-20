@@ -3,7 +3,7 @@
     background-color: black; 
 }
 
-.body 
+.body  /* parent container */ 
 {
     display: flex;
     min-height: 100vh; /* layout takes full height of screen */ 
@@ -17,66 +17,110 @@
     display:flex; 
     justify-content: space-between; /* first item - start line, last item-end line*/ 
     background: #1b1e20; 
-
+    align-items: center;
+    
 
 }
 
-.logo /* child*/ 
+.logo /* flex item / container */ 
 {
     display:flex; /*nested nested flex container */ 
     gap: 10px; /* spacing between flex items */
     align-items: center; 
-
 }
 
 
 
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
-.sitename h1 {
-    color: #fff;
-    font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid green; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+.sitename h1 
+{   
+    color: white; 
+    font-family: monospace; 
+    overflow: hidden; /* content not revealed until animation */
+    border-right: .15em solid green; /* typwriter cursor */
+    white-space: nowrap; /*content on a single line */
+    margin: 0 auto; /*scrolling effect as the typing happens */
+    letter-spacing: .15em; 
     animation: 
       typing 3.5s steps(30, end),
       blink-caret .5s step-end infinite;
-  }
+}
   
-  /* The typing effect */
-  @keyframes typing {
+@keyframes typing /*typing effect*/ 
+{
     from { width: 0 }
     to { width: 100% }
-  }
+}
   
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
+@keyframes blink-caret /* typewriter cursor effect */ 
+{
     from, to { border-color: transparent }
     50% { border-color: green }
-  }
+}
   
 
-
-
-
-
-
-
-/* child */ 
-.button
+#btn /* child of header container*/ 
 {
-    font-family: monospace, white; 
-    padding:10px; 
-    background-color: green; 
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    transition-duration: 0.4s;
-
+    color: white;     /* why is certain css attributes being ignored*/ 
+    background-color: green;
+    padding: 10px; 
+    font-family: monospace;
+    font-size: 20px;
 }
 
 
 
-  
+
+
+.vertical-flex-container 
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-1 h2, .header-2 h2
+{
+    font-family: monospace; 
+    text-decoration: underline; 
+    color: white; 
+    font-size: 20px; 
+    text-align: center; 
+}
+
+.column-1
+{
+    width: 30%;
+    padding: 30px;
+    height: 65vh;
+    background-color: #1b1e20; 
+    border: green solid 5px;
+    margin: 50px; /* spaces it away from header */ 
+
+    display:flex; 
+
+}
+
+
+.justifications-text /* child of column-1 */ 
+{
+    background-color: black; 
+    color: white; 
+    font-family: monospace;
+    margin: 20px; 
+    height: 50vh; 
+    text-align: left; 
+}
+
+.column-2
+{
+    width: 30%;
+    padding: 30px;
+    height: 65vh;
+    background-color: #1b1e20; 
+    border: green solid 5px;
+    margin: 50px; /* spaces it away from header */ 
+
+
+}
+
+/* child of column -2 (all the navigation buttons)*/ 

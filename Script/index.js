@@ -1,8 +1,4 @@
 
-
-
-
-
 // site used - https://bobbyhadz.com/blog/javascript-change-button-text-on-click
 // Toggle button text on Click using JavaScript
 
