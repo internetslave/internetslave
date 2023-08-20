@@ -19,15 +19,14 @@
 
     <!-- typing.js cdn link-->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
 </head>
 
 
 
 <body>
  
-
-
-<header> 
+    <header> 
 
     <!-- flex container (parent)-->
     <div class = "header">
@@ -42,39 +41,38 @@
 
             <!-- sitename (animated typing affect)-->
             <div id="typed-text" style="color: green; font-size: 2rem;font-family: monospace; font-weight: 800;"></div>
-            <script>
-               var typed = new Typed('#typed-text', {
-                  strings: ["internetslave"],
-                  typeSpeed: 40,
-                  backSpeed: 10,
-                  loop: true
-              });
-            </script>
-
-
-
+                <script>
+                    var typed = new Typed('#typed-text', 
+                    {
+                        strings: ["internetslave"],
+                        typeSpeed: 40, // add randimization to speed
+                        backSpeed: 10,
+                        loop: true
+                    });
+                </script>
+            
+            <!-- used : https://www.tutorialspoint.com/how-to-create-an-animated-typing-effect-using-typed-js-->
+            <!-- https://stackoverflow.com/questions/30377937/how-to-use-random-typing-speed-animation-using-typed-js-->
+            <!-- add randimization to speed. use css for typing effect instead???-->
 
         </div>
 
 
-        <!-- changing button value on click (requires javascript?)-->
         <!-- flex item 2(child) -->
-        <div class="philosophy-button philosophy-button-hover">
+        <div class="philosophy-button">
+            <!-- use id attribute to manipulate text with javascript-->
+
+            <!-- the button isn't being styled by css ISSUE-->
+            
             <button id="btn">Philosophy</button>
-            <button type="btn" class="btn btn-primary btn-lg"> <a class="philosophy-button-link" href="philosophy.html">Philosophy</a></button>
             <script src="Script/index.js"></script>
         </div>
+
 
 
     </div> 
 
 </header>
-
-
-<div id = "main">
-
-
-</div>
 
 
 
