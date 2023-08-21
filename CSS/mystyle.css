@@ -72,7 +72,7 @@
 
 
 
-.vertical-flex-container 
+.vertical-flex-container /*parent flex for main content */ 
 {
     display: flex;
     flex-direction: row;
@@ -104,11 +104,11 @@
 .justifications-text /* child of column-1 */ 
 {
     background-color: black; 
-    color: white; 
+    color: green; 
     font-family: monospace;
-    margin: 20px; 
     height: 50vh; 
-    text-align: left; 
+    padding: 20px; 
+    width: 30%;
 }
 
 .column-2
@@ -120,6 +120,7 @@
     border: green solid 5px;
     margin: 50px; /* spaces it away from header */ 
 
+    display:flex; 
 
 }
 
