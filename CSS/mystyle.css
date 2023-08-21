@@ -9,6 +9,8 @@
     min-height: 100vh; /* layout takes full height of screen */ 
     flex-direction: column; /* header, main footer */
     margin: 0;
+
+    height: 100%;
 }
 
 
@@ -59,7 +61,11 @@
 }
   
 
-#btn /* child of header container*/ 
+
+
+
+
+#btn, .github-btn /* child of header container*/ 
 {
     color: white;     /* why is certain css attributes being ignored*/ 
     background-color: green;
@@ -72,10 +78,12 @@
 
 
 
+
 .vertical-flex-container /*parent flex for main content */ 
 {
     display: flex;
     flex-direction: row;
+    justify-content:center;
 }
 
 .header-1 h2, .header-2 h2
@@ -87,7 +95,7 @@
     text-align: center; 
 }
 
-.column-1
+.column-1 /* child of vertical flex container */ 
 {
     width: 30%;
     padding: 30px;
@@ -115,7 +123,7 @@
     flex-wrap: wrap; /*prevent overflow */ 
 }
 
-.column-2
+.column-2 /* child of vertical flex container */ 
 {
     width: 30%;
     padding: 30px;
@@ -130,7 +138,7 @@
 }
 
 /* child of column -2 (all the navigation buttons)*/ 
-.nav-buttons
+.reflection-btns
 {
     color: white;     /* why is certain css attributes being ignored*/ 
     background-color: green;
@@ -138,4 +146,9 @@
     font-family: monospace;
     font-size: 20px;
 
+}
+
+.footer 
+{
+    flex-shrink: 0;
 }

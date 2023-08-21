@@ -5,23 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
     <link rel = "stylesheet" href = "CSS/mystyle.css"> 
-
 
     <title> Reflections </title>
 
     <!--Favicon.io-->
     <link rel="icon" type="image/png" href="images/profile.png"/>
-
-
-    <!-- typing.js cdn link-->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script> --> 
-
 </head>
-
 
 
 <body> <!-- flex container --> 
@@ -34,10 +26,7 @@
             <!-- flex item 1 (child) -->
             <div class="logo">
 
-                <!-- logo image-->
                 <img src="images/profile.png" alt="internetslave logo" style="width:75px; height:75px"> 
-
-                <a href = "https://github.com/internetslave"> <img src="images/github.png" alt = "github icon" style="width:50px; height:50px"> </a>
 
                 <div class = "sitename">
                     <h1> internetslave </h1>
@@ -45,12 +34,20 @@
 
             </div>
 
-            <!-- flex item 2(child) -->
-            <div class="philosophy-button">
-                <!-- use id attribute to manipulate text with javascript-->            
-                <button id="btn">Philosophy</button>
-                <script src="Script/index.js"></script>
-            </div>
+            <nav> 
+                <!-- flex item 2(child) -->
+                <div class="philosophy-btn">
+                    <!-- use id attribute to manipulate text with javascript-->            
+                    <button id="btn">Philosophy</button>
+                    <script src="Script/index.js"></script>
+                </div>
+
+                <!-- flex item 3 (child)-->
+                <div class = "github-btn">
+                    <a class ="button" href = "https://github.com/internetslave"> <img src="images/github.png" alt = "github icon" style="width:50px; height:50px"> Github </a>
+                </div>
+            </nav>
+
 
         </div> 
 
@@ -59,47 +56,53 @@
 
 
     <main> 
+
         <div class="vertical-flex-container">
 
-            <div class="column-1">
+            <section>
+                <div class="column-1">
                 
-                <div class="header-1">
-                    <h2> Why I reflect </h2>
+                    <div class="header-1">
+                        <h2> Why I reflect </h2>
+                    </div>
+
+
+                    <div class= "justifications-text"> 
+                        <p> justifications... </p>
+                    </div>
                 </div>
+            </section>
 
-
-                <div class= "justifications-text"> 
-                    <p> justifications... </p>
-                </div>
-
-            </div>
-
-
-            <div class="column-2">
+            <section> 
+                <div class="column-2">
                 
-                <div class="header-2">
-                    <h2> Reflections </h2>
+                    <div class="header-2">
+                        <h2> Reflections </h2>
+                    </div>
+
+                    <nav> 
+                        <div class="reflection-btns">
+                            <a class ="button" href="grads4nottm.html">Grads4Nottm</a>
+
+                            <a class ="button" href="itsupport.html">IT Support</a>
+
+                            <a class ="button" href="codedojo.html">Code Dojo</a>
+
+                            <a class ="button" href="thiswebsite.html">This Website</a>
+                        </div>
+
+                    </nav>
                 </div>
-
-                <!-- 4 navigation buttons-->
-        
-                <div class="nav-buttons">
-                    <a class ="button" href="grads4nottm.html">Grads4Nottm</a>
-
-                    <a class ="button" href="itsupport.html">IT Support</a>
-
-                    <a class ="button" href="codedojo.html">Code Dojo</a>
-
-                    <a class ="button" href="thiswebsite.html">This Website</a>
-                </div>
-
-            </div>
+            </section>
 
 
         </div>
     </main>
 
 
+    </footer>
+        <!-- github pages - mention u use that, and other data privacy stuff-->
+     </footer>
 
 </body>
 
