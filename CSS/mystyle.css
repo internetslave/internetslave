@@ -3,7 +3,7 @@
     background-color: black; 
 }
 
-.body  /* parent container */ 
+.body /* parent container */
 {
     display: flex;
     min-height: 100vh; /* layout takes full height of screen */ 
@@ -14,19 +14,25 @@
 }
 
 
+
+
+
+
 .header  /* nested flex container*/ 
 {
     display:flex; 
     justify-content: space-between; /* first item - start line, last item-end line*/ 
     background: #1b1e20; 
     align-items: center;
+
+    height: 15vh; 
     
 
 }
 
-.logo /* flex item / container */ 
+.logo /* container nested inside header  */ 
 {
-    display:flex; /*nested nested flex container */ 
+    display:flex; 
     gap: 10px; /* spacing between flex items */
     align-items: center; 
     margin: 20px; /* space away from border*/ 
@@ -40,6 +46,7 @@
 {   
     color: white; 
     font-family: monospace; 
+    font-size: 40px; 
     overflow: hidden; /* content not revealed until animation */
     border-right: .15em solid green; /* typwriter cursor */
     white-space: nowrap; /*content on a single line */
@@ -64,33 +71,46 @@
   
 
 
-
-.header-btns
+.header-btns /* container nested inside header container */ 
 {
-
-    display:flex; /*nested nested flex container */ 
-    gap: 10px; /* spacing between flex items */
+    display:flex; 
+    gap: 10px; 
     align-items: center; 
-    margin: 20px; /* space away from border*/ 
-
-
+    margin: 20px; 
 }
 
-#btn /* child of header container*/ 
+#btn /* child of header-btns container*/ 
 {
     color: white;     
     background-color: green;
     padding: 10px; 
     font-family: monospace;
-    font-size: 20px;
-    margin: 20px; /* space away from border*/ 
+    font-size: 25px;
+    margin: 20px; 
+    
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+
 }
 
-.github-btn  /* child of header container */
+.github-btn  /* child of header-btns container */
 {
     background-color: green;
     padding: 10px; 
     margin: 20px; 
+
+    border-radius: 8px; 
+    border: 1px solid white ; 
+    border-width: 2px; 
+    box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+
 }
 
 
@@ -108,7 +128,7 @@
     font-family: monospace; 
     text-decoration: underline; 
     color: white; 
-    font-size: 20px; 
+    font-size: 25px; 
     text-align: center; 
 }
 
@@ -156,16 +176,43 @@
 
 /* child of column -2 (all the navigation buttons)*/ 
 .reflection-btns
+{   
+    display:flex;
+    flex-direction:column; /* aligns them vertically */ 
+    align-items: center;
+    gap: 50px; 
+    margin:20px; 
+
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+.grads4nottm-btn, .itsupport-btn, .codedojo-btn, .thiswebsite-btn
 {
-    color: white;     /* why is certain css attributes being ignored*/ 
+    color: white;     
     background-color: green;
     padding: 10px; 
     font-family: monospace;
-    font-size: 20px;
+    font-size: 16px;
+    text-decoration:none; 
+
+    border-radius: 8px; 
+    border: 1px solid white ; 
+    border-width: 2px; 
+    box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
+
+}
+
+#btn:hover, .grads4nottm-btn:hover, .itsupport-btn:hover, .codedojo-btn:hover, .thiswebsite-btn:hover, .github-btn:hover
+{
+    background-color: rgba(0, 0, 0, 0.8);
 
 }
 
 .footer 
 {
     flex-shrink: 0;
+    
 }

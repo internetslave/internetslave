@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,60 +14,39 @@
     <link rel="icon" type="image/png" href="images/profile.png"/>
 </head>
 
+<body>
+    <header class = "header">
 
-<body> <!-- flex container --> 
- 
-    <header> 
-
-        <!-- nested flex container-->
-        <div class = "header">
-
-            <!-- flex item 1 (child) -->
             <div class="logo">
-
                 <img src="images/profile.png" alt="internetslave logo" style="width:75px; height:75px"> 
 
                 <div class = "sitename">
                     <h1> internetslave </h1>
                 </div>
-
             </div>
 
-            <nav> 
-                <div class ="header-btns">
-                                    <!-- flex item 2(child) -->
-                    <div class="philosophy-btn">
-                    <!-- use id attribute to manipulate text with javascript-->            
-                        <button id="btn">Philosophy</button>
-                        <script src="Script/index.js"></script>
-                    </div>
-
-                <!-- flex item 3 (child)-->
-                    <div class = "github-btn">
-                        <a class ="button" href = "https://github.com/internetslave"> <img src="images/github.png" alt = "github icon" style="width:50px; height:50px"> </a>
-                    </div>
-
+            <nav class ="header-btns">
+                <div class="philosophy-btn">
+                    <!-- use id attribute to manipulate text with javascript-->     
+                    <!-- SHOULDN'T THE ID FOR THIS BUTTON BE MORE DESCRIPTIVE?-->       
+                    <button id="btn">Philosophy</button>
+                    <script src="Script/index.js"></script>
                 </div>
 
+                <div class = "github-btn">
+                    <a class ="button" href = "https://github.com/internetslave"> <img src="images/github.png" alt = "github icon" style="width:30px; height:30px"> </a>
+                </div>
             </nav>
-
-
-        </div> 
 
     </header>
 
-
-
     <main> 
-
         <article class="vertical-flex-container">
 
             <section class="column-1">
-                
                     <div class="header-1">
                         <h2> Why I reflect </h2>
                     </div>
-
 
                     <div class= "justifications-text"> 
                         <p> justifications... </p>
@@ -76,27 +54,22 @@
             </section>
 
             <section class="column-2">
-                
                     <div class="header-2">
                         <h2> Reflections </h2>
                     </div>
 
-                    <nav> 
-                        <div class="reflection-btns">
-                            <a class ="button" href="grads4nottm.html">Grads4Nottm</a>
+                    <nav class="reflection-btns">
+                        <a class ="grads4nottm-btn" href="grads4nottm.html">Grads4Nottm - internship</a>
 
-                            <a class ="button" href="itsupport.html">IT Support</a>
+                        <a class ="itsupport-btn" href="itsupport.html">IT Support - volunteering</a>
 
-                            <a class ="button" href="codedojo.html">Code Dojo</a>
+                        <a class ="codedojo-btn" href="codedojo.html">Code Dojo - volunteering </a>
 
-                            <a class ="button" href="thiswebsite.html">This Website</a>
-                        </div>
+                        <a class ="thiswebsite-btn" href="thiswebsite.html">This Website - project</a>
                     </nav>
-
             </section>
 
         </article>
-
     </main>
 
 
@@ -105,6 +78,4 @@
      </footer>
 
 </body>
-
-
 </html>
