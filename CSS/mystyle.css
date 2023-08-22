@@ -29,6 +29,8 @@
     display:flex; /*nested nested flex container */ 
     gap: 10px; /* spacing between flex items */
     align-items: center; 
+    margin: 20px; /* space away from border*/ 
+
 }
 
 
@@ -63,17 +65,33 @@
 
 
 
-
-
-#btn, .github-btn /* child of header container*/ 
+.header-btns
 {
-    color: white;     /* why is certain css attributes being ignored*/ 
+
+    display:flex; /*nested nested flex container */ 
+    gap: 10px; /* spacing between flex items */
+    align-items: center; 
+    margin: 20px; /* space away from border*/ 
+
+
+}
+
+#btn /* child of header container*/ 
+{
+    color: white;     
     background-color: green;
     padding: 10px; 
     font-family: monospace;
     font-size: 20px;
+    margin: 20px; /* space away from border*/ 
 }
 
+.github-btn  /* child of header container */
+{
+    background-color: green;
+    padding: 10px; 
+    margin: 20px; 
+}
 
 
 
@@ -82,7 +100,6 @@
 .vertical-flex-container /*parent flex for main content */ 
 {
     display: flex;
-    flex-direction: row;
     justify-content:center;
 }
 
