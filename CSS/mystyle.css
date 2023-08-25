@@ -3,10 +3,6 @@
     background-color: black; 
     font-family: monospace; 
 
-    /*  define variables in the :root pseudo-class and then use it anywhere the value is needed */ 
-    --border-colour: #517428; 
-    --button-border: white; 
-
 }
 
 .body /* parent container */
@@ -126,6 +122,7 @@
     background-color: #1b1e20; 
     border: green solid 5px;
     margin: 2rem; /* spaces it away from header */ 
+    overflow: auto; 
 }
 
 
@@ -173,7 +170,7 @@
     color: white;     
 
     border-radius: 8px; 
-    border: 2px solid var(--button-border);
+    border: 2px solid white;
     border-width: 2px; 
     box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
 
@@ -181,7 +178,6 @@
     cursor: pointer;
 }
 
-/*HOW COULD I PUT THIS IN THE SHARED BUTTON PROPERTIES OR CAN I NOT*/ 
 #btn:hover, .grads-button:hover, .itsupport-button:hover, .codedojo-button:hover, .thiswebsite-button:hover, .github-button:hover
 {
     background-color: rgba(0, 0, 0, 0.8);
