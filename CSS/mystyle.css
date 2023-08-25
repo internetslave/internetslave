@@ -58,7 +58,8 @@
     color: white; 
     font-family: monospace; 
 
-    font-size: 350%; 
+    font-size: clamp(1.5rem, 2.5vw, 4rem); /* built in function that allows text to grow/shrink with viewport*/
+
 
     overflow: hidden; /* content not revealed until animation */
 
@@ -102,7 +103,7 @@
 #btn /* child of header-btns container*/ 
 {
 
-    font-size: 200%; /* percentages - relative to container */
+    font-size: clamp(1rem, 2vw, 1.5rem);
     margin: .9rem; 
     padding: .3rem; 
 
@@ -154,7 +155,8 @@
 
 .header-1 h2, .header-2 h2
 {
-    font-size: 230%; 
+    font-size: clamp(1rem, 2vw, 2rem);
+
 
 
     font-family: monospace; 
@@ -173,7 +175,8 @@
     height: 65vh; 
     padding: 2rem;
 
-    
+    font-size: clamp(0.5rem, 1vw, 1rem);
+
     background-color: #1b1e20; 
     border: green solid 5px;
     margin: 2rem; /* spaces it away from header */ 
@@ -186,10 +189,11 @@
     background-color: black; 
     color: green; 
     font-family: monospace;
-    font-size: 14px;
+
+
     text-align: center;
     flex-wrap: nowrap; 
-    padding: 15px; 
+    padding: 1rem; 
     flex-shrink:0; 
 
     overflow:auto; 
@@ -198,30 +202,32 @@
 
 
 
-/* child of column -2 (all the navigation buttons) isn't this the same as the other one below it?!!!*/ 
+/* child of column -2 (all the navigation buttons)*/ 
 .reflection-btns
 {   
     display:flex;
     flex-direction:column; /* aligns them vertically */ 
     align-items: center;
-    gap: 50px; 
-    margin:20px; 
-
+    gap: 2.5rem; 
+    margin:3rem; 
 
     transition-duration: 0.4s;
     cursor: pointer;
 
-
-
 }
 
-.grads4nottm-btn, .itsupport-btn, .codedojo-btn, .thiswebsite-btn
+/* put all the buttons stylistic stuff under here - both reflections and philosophy / and github button*/ 
+
+
+.grads-btn, .itsupport-btn, .codedojo-btn, .thiswebsite-btn
 {
     color: white;     
     background-color: green;
-    padding: 10px; 
+    padding: 0.5rem; 
     font-family: monospace;
-    font-size: 16px;
+    font-size: clamp(1rem, 1vw, 1rem);
+
+    
     text-decoration:none; 
 
     border-radius: 8px; 
@@ -231,7 +237,7 @@
 
 }
 
-#btn:hover, .grads4nottm-btn:hover, .itsupport-btn:hover, .codedojo-btn:hover, .thiswebsite-btn:hover, .github-btn:hover
+#btn:hover, .grads-btn:hover, .itsupport-btn:hover, .codedojo-btn:hover, .thiswebsite-btn:hover, .github-btn:hover
 {
     background-color: rgba(0, 0, 0, 0.8);
 
@@ -239,15 +245,4 @@
 
 
 
-@media (max-width:500px) {
-    .logo
-    { 
-        flex-shrink:1; 
 
-        // make the interenetslave font shrink its not srhinking
-        make the picture shrink 
-        make the buttons shrink 
-        only the header is adjusting to the tab page size not the rest?
-        
-    }
-}
