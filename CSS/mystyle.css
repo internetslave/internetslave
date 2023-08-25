@@ -1,16 +1,13 @@
-:root /* applies to the entire thing*/ 
+:root /* applies to the entire thing, overrides everything*/ 
 {
     background-color: black; 
+    font-family: monospace; 
 
     /*  define variables in the :root pseudo-class and then use it anywhere the value is needed */ 
     --border-colour: #517428; 
-
     --button-border: white; 
+
 }
-
-
-
-
 
 .body /* parent container */
 {
@@ -21,11 +18,6 @@
     min-width: 100vw;
 
 }
-
-
-
-
-
 
 .header  /* nested flex container*/ 
 {
@@ -45,23 +37,15 @@
     display:flex; 
     align-items: center; 
 
-    gap: 1rem; /* spacing between flex items */
     margin: 2rem; /* space away from border */ 
-
-    
+  
 }
-
-
 
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
 .sitename h1 
 {   
-
     color: white; 
-    font-family: monospace; 
-
     font-size: clamp(1.5rem, 2.5vw, 4rem); /* built in function that allows text to grow/shrink with viewport*/
-
 
     overflow: hidden; /* content not revealed until animation */
 
@@ -88,29 +72,27 @@
 }
   
 
-
-
 .header-buttons /* container nested inside header container */ 
 {
     display:flex; 
     align-items: center; 
 
-    gap: 1rem; /* use relative sizing instead of absolute - key to responsivity */ 
     margin: 2rem; 
 }
 
 #btn /* child of header-buttons container*/ 
 {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: monospace; 
+    font-size: clamp(1rem, 2vw, 3rem);
     margin: .9rem; 
     padding: .3rem; 
-    
+ 
 }
 
 .github-button  /* child of header-buttons container */
 {
     padding: 1rem; 
-    margin: 2rem; 
+    margin: 1rem; 
 }
 
 
@@ -123,13 +105,9 @@
 
 .header-1 h2, .header-2 h2
 {
-    font-size: clamp(1rem, 2vw, 2rem);
-
-
-
-    font-family: monospace; 
-    text-decoration: underline; 
+    font-size: clamp(1rem, 2vw, 3rem);
     color: white; 
+    text-decoration: underline; 
     text-align: center; 
 }
 
@@ -143,12 +121,11 @@
     height: 65vh; 
     padding: 2rem;
 
-    font-size: clamp(0.5rem, 1vw, 1rem);
 
+    font-size: clamp(0.8rem, 1vw, 2rem);
     background-color: #1b1e20; 
     border: green solid 5px;
     margin: 2rem; /* spaces it away from header */ 
-    
 }
 
 
@@ -156,7 +133,6 @@
 {
     background-color: black; 
     color: green; 
-    font-family: monospace;
 
 
     text-align: center;
@@ -184,19 +160,17 @@
 .grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button
 {
     padding: 0.5rem; 
-    font-size: clamp(1rem, 1vw, 1rem);
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
 
     text-decoration:none; 
 }
 
 
-/* this would be the shared button properties - class???*/ 
+/*group css selectors together to prevent redundancy */
 #btn, .github-button, .grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button
 { 
-    font-family: monospace;
     background-color: green;
     color: white;     
-
 
     border-radius: 8px; 
     border: 2px solid var(--button-border);
