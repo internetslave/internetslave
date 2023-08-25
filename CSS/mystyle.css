@@ -1,12 +1,8 @@
-:root /* applies to the entire thing, overrides everything*/ 
+:root /* applies to the entire thing, overrides everything */ 
 {
     background-color: black; 
     font-family: monospace; 
-
-    /*  define variables in the :root pseudo-class and then use it anywhere the value is needed */ 
-    --border-colour: #517428; 
-    --button-border: white; 
-
+    --grey-colour:  #1b1e20;     /*  setting up colour scheme*/ 
 }
 
 .body /* parent container */
@@ -16,7 +12,6 @@
 
     min-height: 100vh; /* layout takes full height of viewport screen */ 
     min-width: 100vw;
-
 }
 
 .header  /* nested flex container*/ 
@@ -28,8 +23,7 @@
     height: 15vh; /* layout fits on one page - no scrolling necessary*/
     width: 100%; 
 
-    background-color: #1b1e20; 
-
+    background-color: var(--grey-colour); 
 }
 
 .logo /* container nested inside header  */ 
@@ -37,8 +31,8 @@
     display:flex; 
     align-items: center; 
 
+    gap: 0.5rem;
     margin: 2rem; /* space away from border */ 
-  
 }
 
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
@@ -49,8 +43,7 @@
 
     overflow: hidden; /* content not revealed until animation */
 
-    /* make all lengths ems - so it depends on font size */ 
-    border-right: .15rem solid green; /* typwriter cursor */
+    border-right: 0.3rem solid green; /* typwriter cursor */
     white-space: nowrap; /*content on a single line */
     margin: 0 auto; /*scrolling effect as the typing happens */
     letter-spacing: .15rem; 
@@ -78,32 +71,23 @@
     align-items: center; 
 
     margin: 2rem; 
+    gap: 2rem; 
 }
 
 #btn /* child of header-buttons container*/ 
 {
     font-family: monospace; 
     font-size: clamp(1rem, 2vw, 3rem);
-    margin: .9rem; 
-    padding: .3rem; 
- 
-}
-
-.github-button  /* child of header-buttons container */
-{
-    padding: 1rem; 
     margin: 1rem; 
 }
-
 
 .vertical-flex-container /*parent flex for main content */ 
 {
     display: flex;
     justify-content:center;
-
 }
 
-.header-1 h2, .header-2 h2
+.header-1 h2, .header-2 h2 /*group css selectors together to prevent redundancy */
 {
     font-size: clamp(1rem, 2vw, 3rem);
     color: white; 
@@ -113,7 +97,6 @@
 
 .column-1, .column-2 /* child of vertical flex container */ 
 {
-    
     display:flex; 
     flex-direction:column; 
     
@@ -121,19 +104,18 @@
     height: 65vh; 
     padding: 2rem;
 
-
     font-size: clamp(0.8rem, 1vw, 2rem);
-    background-color: #1b1e20; 
-    border: green solid 5px;
+    background-color: var(--grey-colour); 
+    border: 5px solid green; 
     margin: 2rem; /* spaces it away from header */ 
-}
 
+    overflow: auto; /* adds scroll bars when tab shrinks */ 
+}
 
 .justification /* child of column-1 */ 
 {
     background-color: black; 
     color: green; 
-
 
     text-align: center;
     flex-wrap: nowrap; 
@@ -141,39 +123,32 @@
     flex-shrink:0; 
 
     overflow:auto; 
-
 }
 
-
-
-/* child of column -2 (all the navigation buttons)*/ 
-.reflection-buttons
+.reflection-buttons /* child of column -2 (all the navigation buttons)*/ 
 {   
     display:flex;
     flex-direction:column; /* aligns them vertically */ 
     align-items: center;
+    
     gap: 2.5rem; 
     margin:3rem; 
-
 }
 
 .grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button
 {
-    padding: 0.5rem; 
     font-size: clamp(0.8rem, 1.5vw, 2rem);
-
     text-decoration:none; 
 }
 
-
-/*group css selectors together to prevent redundancy */
 #btn, .github-button, .grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button
 { 
     background-color: green;
     color: white;     
 
+    padding: .3rem; 
     border-radius: 8px; 
-    border: 2px solid var(--button-border);
+    border: 2px solid white;
     border-width: 2px; 
     box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
 
@@ -181,10 +156,8 @@
     cursor: pointer;
 }
 
-/*HOW COULD I PUT THIS IN THE SHARED BUTTON PROPERTIES OR CAN I NOT*/ 
 #btn:hover, .grads-button:hover, .itsupport-button:hover, .codedojo-button:hover, .thiswebsite-button:hover, .github-button:hover
 {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
 
