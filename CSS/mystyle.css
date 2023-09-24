@@ -154,17 +154,18 @@
 
 }
 
-.grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button
+.grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button, .certmentor-button, .becket-button, .studentsinclassroom-button, .courserep-button, .librarystudentmentor-button
 {
     padding: 0.5rem; 
     font-size: clamp(0.8rem, 1.5vw, 2rem);
+    text-align:center;
 
     text-decoration:none; 
 }
 
 
 /*group css selectors together to prevent redundancy */
-#btn, .github-button, .grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button
+#btn, .github-button, .grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button, .certmentor-button, .becket-button, .studentsinclassroom-button, .courserep-button, .librarystudentmentor-button
 { 
     background-color: green;
     color: white;     
@@ -178,7 +179,7 @@
     cursor: pointer;
 }
 
-#btn:hover, .grads-button:hover, .itsupport-button:hover, .codedojo-button:hover, .thiswebsite-button:hover, .github-button:hover
+#btn:hover, .grads-button:hover, .itsupport-button:hover, .codedojo-button:hover, .thiswebsite-button:hover, .certmentor-button:hover, .becket-button:hover, .studentsinclassroom-button:hover, .courserep-button:hover, .librarystudentmentor-button:hover, .github-button:hover
 {
     background-color: rgba(0, 0, 0, 0.8);
 }
