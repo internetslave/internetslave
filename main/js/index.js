@@ -8,11 +8,7 @@ function replaceText(selector, target, replacement)
   targetNode.innerText = text.replace(target, replacement);
 }
 
-function removeBtn(selector, delete_target)
-{
-  const targetNode = document.querySelector(selector);
-  targetNode.remove();// remove the button how do u delete it
-}
+
 
 function updateThenDisplayValues()
 {
@@ -24,19 +20,7 @@ function updateThenDisplayValues()
   replaceText("#h2", "Reflections", "Privacy respecting tools");
 
   replaceText("#p1", "Self-awareness is undeniably important. Instead of just blindly going through the motions, it forces me to contemplate if the activities I am spending time on are worthwhile. Additionally, self-awareness allows me to clearly track my learning progress; which naturally leads me to goal set appropriately. These takeaways will not only inform future decisions but also ensure I make the most of my current opportunities. This approach may not automatically result in profound conclusions; however with consistent effort, it helps me overcome challenges, as well as double down on personal preferences.", 
-  "Oftentimes, I get questions as to why I've made my own personal laptop as well as mobile device practically unusable but to me it's the only logical option. I wasn't always like this, I used to have relatively 'normal' tech habits. However, during COVID I fell down a rabbit hole, and I haven't recovered since. I'm used to making my life 'harder' for myself, but that's simply because I've developed stubborn morals, and I feel like if I give up on them I'm giving up on a part of myself. I try to live with intention and do things a specific way because it's fufilling to me, even though it might be seen as an inconvenineince to others. One of my 'values' but I and many others would argue it's a human right is : privacy! I don't have any social media accounts, and have even chosen to abstain from Linkdin even though this will make my career more difficult than necessary; it's something I'm willing to stand by.As everything shifts to the digital realm it's practically impossible to maintain any good level of privacy if you want to participate in modern day society. As a result, I have to make some tradeoffs. I don't expect most people to take as many percautions as I have - and I know there are others who have taken even more - I do what I do simply because I want to resist and live in a future where the only monopolies that control the internet are big names like google and apple  etc. I want the internet to be ideally free - acessible - like it orignally was prior to it's commodification. However, we're not going back to web 1.0 no matter how hard we try - so I want to be a part of / create a future that is safe and doesn't resemble 1984 as closely as it's seeming to. Privacy protecting technology is the way forward and is something I want to be a part of.");
-
-  // shouldn't this go inside a for loop?!
-  removeBtn("#extrabtn1");
-  removeBtn("#extrabtn2");
-  removeBtn("#extrabtn3");
-  removeBtn("#extrabtn4");
-  removeBtn("#extrabtn5");
-  removeBtn("#extrabtn6");
-
-
-
-
+  "Oftentimes, I get questions as to why I've made my own personal laptop as well as mobile device practically unusable but to me it's the only logical option. I wasn't always like this, I used to have relatively 'normal' tech habits. However, during COVID I fell down a rabbit hole, and I haven't recovered since. I'm used to making my life 'harder' for myself, but that's simply because I've developed stubborn morals, and I feel like if I give up on them I'm giving up on a part of myself. I try to live with intention and do things a specific way because it's fufilling to me, even though it might be seen as an inconvenineince to others. One of my 'values' but I and many others would argue it's a human right is : privacy! I don't have any social media accounts, and have even chosen to abstain from Linkdin even though this will make my career more difficult than necessary; it's something I'm willing to stand by. As everything shifts to the digital realm it's practically impossible to maintain any good level of privacy if you want to participate in modern day society. As a result, I have to make some tradeoffs. I don't expect most people to take as many precautions as I have - and I know there are others who have taken even more.");
 
 }
 
@@ -48,8 +32,7 @@ function updateThenDisplayReflections()
 
   replaceText("#h2", "Privacy respecting tools", "Reflections");
 
-  // this isn't replacing it backwards ******
-  replaceText("#p1", "Oftentimes, I get questions as to why I've made my own personal laptop as well as mobile device practically unusable but to me it's the only logical option. I wasn't always like this, I used to have relatively 'normal' tech habits. However, during COVID I fell down a rabbit hole, and I haven't recovered since. I'm used to making my life 'harder' for myself, but that's simply because I've developed stubborn morals, and I feel like if I give up on them I'm giving up on a part of myself. I try to live with intention and do things a specific way because it's fufilling to me, even though it might be seen as an inconvenineince to others. One of my 'values' but I and many others would argue it's a human right is : privacy! I don't have any social media accounts, and have even chosen to abstain from Linkdin even though this will make my career more difficult than necessary; it's something I'm willing to stand by.As everything shifts to the digital realm it's practically impossible to maintain any good level of privacy if you want to participate in modern day society. As a result, I have to make some tradeoffs. I don't expect most people to take as many percautions as I have - and I know there are others who have taken even more - I do what I do simply because I want to resist and live in a future where the only monopolies that control the internet are big names like google and apple  etc. I want the internet to be ideally free - acessible - like it orignally was prior to it's commodification. However, we're not going back to web 1.0 no matter how hard we try - so I want to be a part of / create a future that is safe and doesn't resemble 1984 as closely as it's seeming to. Privacy protecting technology is the way forward and is something I want to be a part of.",
+  replaceText("#p1", "Oftentimes, I get questions as to why I've made my own personal laptop as well as mobile device practically unusable but to me it's the only logical option. I wasn't always like this, I used to have relatively 'normal' tech habits. However, during COVID I fell down a rabbit hole, and I haven't recovered since. I'm used to making my life 'harder' for myself, but that's simply because I've developed stubborn morals, and I feel like if I give up on them I'm giving up on a part of myself. I try to live with intention and do things a specific way because it's fufilling to me, even though it might be seen as an inconvenineince to others. One of my 'values' but I and many others would argue it's a human right is : privacy! I don't have any social media accounts, and have even chosen to abstain from Linkdin even though this will make my career more difficult than necessary; it's something I'm willing to stand by. As everything shifts to the digital realm it's practically impossible to maintain any good level of privacy if you want to participate in modern day society. As a result, I have to make some tradeoffs. I don't expect most people to take as many precautions as I have - and I know there are others who have taken even more.",
   "Self-awareness is undeniably important. Instead of just blindly going through the motions, it forces me to contemplate if the activities I am spending time on are worthwhile. Additionally, self-awareness allows me to clearly track my learning progress; which naturally leads me to goal set appropriately. These takeaways will not only inform future decisions but also ensure I make the most of my current opportunities. This approach may not automatically result in profound conclusions; however with consistent effort, it helps me overcome challenges, as well as double down on personal preferences."); 
 
 
