@@ -154,7 +154,7 @@
 
 }
 
-.grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button, .certmentor-button, .becket-button, .studentsinclassroom-button, .courserep-button, .librarystudentmentor-button
+.grads4nottm-button, .it-support-button, .code-dojo-button, .this-website-button, .cert-mentor-button, .becket-button, .students-in-classrooms-button, .course-rep-button, .library-student-mentor-button
 {
     padding: 0.5rem; 
     font-size: clamp(0.8rem, 1.5vw, 2rem);
@@ -165,7 +165,7 @@
 
 
 /*group css selectors together to prevent redundancy */
-#btn, .github-button, .grads-button, .itsupport-button, .codedojo-button, .thiswebsite-button, .certmentor-button, .becket-button, .studentsinclassroom-button, .courserep-button, .librarystudentmentor-button
+#btn, .github-button, .grads4nottm-button, .it-support-button, .code-dojo-button, .this-website-button, .cert-mentor-button, .becket-button, .students-in-classrooms-button, .course-rep-button, .library-student-mentor-button
 { 
     background-color: green;
     color: white;     
@@ -179,7 +179,7 @@
     cursor: pointer;
 }
 
-#btn:hover, .grads-button:hover, .itsupport-button:hover, .codedojo-button:hover, .thiswebsite-button:hover, .certmentor-button:hover, .becket-button:hover, .studentsinclassroom-button:hover, .courserep-button:hover, .librarystudentmentor-button:hover, .github-button:hover
+#btn:hover, .github-button:hover, .grads4nottm-button:hover, .it-support-button:hover, .code-dojo-button:hover, .this-website-button:hover, .cert-mentor-button:hover, .becket-button:hover, .students-in-classrooms-button:hover, .course-rep-button:hover, .library-student-mentor-button:hover
 {
     background-color: rgba(0, 0, 0, 0.8);
 }
