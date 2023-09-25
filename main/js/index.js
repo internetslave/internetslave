@@ -1,21 +1,29 @@
 // https://bobbyhadz.com/blog/javascript-change-button-text-on-click
 
 
-// forward definitions for fucntion
+
+
+function replaceText(selector, target, replacement)
+{
+  const targetNode = document.querySelector(selector);
+  const text = targetNode.innerText;
+  targetNode.innerText = text.replace(target, replacement);
+}
+
+// forward definitions for function
 function updateThenDisplayPhilosophy()
 {
-  let text = document.getElementById("h1").innerHTML;
-  document.getElementById("h1").innerHTML = text.replace("Why I reflect", "My Values");
-
-  
-
+  replaceText("#h1", "Why I reflect", "My Values");
 }
 
 function updateThenDisplayReflections()
 {
-  let text = document.getElementById("h1").innerHTML;
-  document.getElementById("h1").innerHTML = text.replace("My Values", "Why I reflect");
+  replaceText("#h1", "My Values", "Why I reflect");
+
 }
+
+
+
 
 
 //click event listener to button 
