@@ -76,20 +76,6 @@
     margin: 2rem; 
 }
 
-#btn /* child of header-buttons container*/ 
-{
-    font-family: monospace; 
-    font-size: clamp(1rem, 2vw, 3rem);
-    margin: .9rem; 
-    padding: .3rem; 
- 
-}
-
-.github-button  /* child of header-buttons container */
-{
-    padding: 1rem; 
-    margin: 1rem; 
-}
 
 
 .vertical-flex-container /*parent flex for main content */ 
@@ -144,32 +130,45 @@
 
 
 /* child of column -2 (all the navigation buttons)*/ 
-.reflection-buttons
+.reflection-btns
 {   
     display:flex;
     flex-direction:column; /* aligns them vertically */ 
     align-items: center;
+
+}
+
+
+
+
+.github-button
+{
+    width: clamp(3vw, 3vw, 5vw); 
+    height: clamp(3vw, 3vw, 5vw);
+}
+
+#btn /* child of header-buttons container*/ 
+{
+    font-size: clamp(1rem, 2vw, 3rem); /* font sizes are specific to these buttons */ 
+}
+
+.reflection-btns > a  /*style all the items inside the flex container */ 
+{
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
+}
+
+#btn, .reflection-btns>a, .github-button
+{ 
+    font-family: monospace; 
+    background-color: green;
+    color: white;  
+    text-align:center;
+    text-decoration:none;   
+
     gap: 2.5rem; 
     margin:1rem; 
-
-}
-
-.grads4nottm-button, .it-support-button, .code-dojo-button, .this-website-button, .cert-mentor-button, .becket-button, .students-in-classrooms-button, .course-rep-button, .library-student-mentor-button
-{
     padding: 0.5rem; 
-    font-size: clamp(0.8rem, 1.5vw, 2rem);
-    text-align:center;
-
-    text-decoration:none; 
-}
-
-
-/*group css selectors together to prevent redundancy */
-#btn, .github-button, .grads4nottm-button, .it-support-button, .code-dojo-button, .this-website-button, .cert-mentor-button, .becket-button, .students-in-classrooms-button, .course-rep-button, .library-student-mentor-button
-{ 
-    background-color: green;
-    color: white;     
-
+    
     border-radius: 8px; 
     border: 2px solid white;
     border-width: 2px; 
@@ -179,7 +178,7 @@
     cursor: pointer;
 }
 
-#btn:hover, .github-button:hover, .grads4nottm-button:hover, .it-support-button:hover, .code-dojo-button:hover, .this-website-button:hover, .cert-mentor-button:hover, .becket-button:hover, .students-in-classrooms-button:hover, .course-rep-button:hover, .library-student-mentor-button:hover
+#btn:hover, .reflection-btns >a:hover, .github-button:hover
 {
     background-color: rgba(0, 0, 0, 0.8);
 }
