@@ -16,8 +16,11 @@
 
 }
 
+
+
+
 /* nested flex container*/ 
-.header  {
+.nav-bar  {
     display:flex; 
     justify-content: space-between; /* first item - start line, last item-end line*/ 
     align-items: center; 
@@ -29,18 +32,8 @@
 
 }
 
-/* container nested inside header  */ 
-.logo {
-    display:flex; 
-    align-items: center; 
-
-    margin: 2rem; /* space away from border */ 
-}
-
-
-
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
-.sitename h1 {   
+.nav-bar h1 {   
     color: white; 
     font-size: clamp(1.5rem, 2.5vw, 4rem); /* built in function that allows text to grow/shrink with viewport*/
 
@@ -59,13 +52,13 @@
 /*typing effect*/ 
 @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 20% }
 }
 
 /* typewriter cursor effect */ 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: green }
+    20% { border-color: green }
 }
   
 /*parent flex for main content */ 
@@ -74,6 +67,14 @@
     justify-content:center;
 
 }
+
+
+
+
+
+
+
+
 
 .header-1 h2, .header-2 h2{
     font-size: clamp(1rem, 2vw, 3rem);
