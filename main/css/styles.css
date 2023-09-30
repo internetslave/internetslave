@@ -37,6 +37,14 @@
   
 }
 
+.header-buttons /* container nested inside header container */ 
+{
+    display:flex; 
+    align-items: center; 
+
+    margin: 2rem; 
+}
+
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
 .sitename h1 
 {   
@@ -68,13 +76,7 @@
 }
   
 
-.header-buttons /* container nested inside header container */ 
-{
-    display:flex; 
-    align-items: center; 
 
-    margin: 2rem; 
-}
 
 
 
@@ -140,24 +142,7 @@
 
 
 
-
-.github-button
-{
-    width: clamp(3vw, 3vw, 5vw); 
-    height: clamp(3vw, 3vw, 5vw);
-}
-
-
-#toggle-btn /* child of header-buttons container*/ 
-{
-    font-size: clamp(1rem, 2vw, 3rem); /* font sizes are specific to these buttons */ 
-}
-
-.reflection-btns > a  /*style all the items inside the flex container */ 
-{
-    font-size: clamp(0.8rem, 1.5vw, 2rem);
-}
-
+/* style buttons all together = consistentcy */ 
 #toggle-btn, .reflection-btns>a, .github-button
 { 
     font-family: monospace; 
@@ -185,3 +170,19 @@
 }
 
 
+/*these sizes are distinct however*/ 
+.github-button
+{
+    width: clamp(3vw, 3vw, 5vw); 
+    height: clamp(3vw, 3vw, 5vw);
+}
+
+#toggle-btn /* child of header-buttons container*/ 
+{
+    font-size: clamp(1rem, 2vw, 3rem);
+}
+
+.reflection-btns > a  /*style all the items inside the flex container */ 
+{
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
+}

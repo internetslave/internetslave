@@ -12,7 +12,7 @@ function replaceText(selector, target, replacement)
 function updateThenDisplayValues()
 {
 
-  replaceText("#Favicon", "Reflections", "Values"); 
+  replaceText("#favicon", "Reflections", "Values"); 
 
   replaceText("#h1", "Why I reflect", "Core Value : Privacy");
 
@@ -25,7 +25,7 @@ function updateThenDisplayValues()
 
 function updateThenDisplayReflections()
 {
-  replaceText("#Favicon", "Values", "Reflections");
+  replaceText("#favicon", "Values", "Reflections");
 
   replaceText("#h1", "Core Value : Privacy", "Why I reflect");
 
