@@ -147,7 +147,8 @@
     height: clamp(3vw, 3vw, 5vw);
 }
 
-#btn /* child of header-buttons container*/ 
+
+#toggle-btn /* child of header-buttons container*/ 
 {
     font-size: clamp(1rem, 2vw, 3rem); /* font sizes are specific to these buttons */ 
 }
@@ -157,7 +158,7 @@
     font-size: clamp(0.8rem, 1.5vw, 2rem);
 }
 
-#btn, .reflection-btns>a, .github-button
+#toggle-btn, .reflection-btns>a, .github-button
 { 
     font-family: monospace; 
     background-color: green;
@@ -178,7 +179,7 @@
     cursor: pointer;
 }
 
-#btn:hover, .reflection-btns >a:hover, .github-button:hover
+#toggle-btn:hover, .reflection-btns >a:hover, .github-button:hover
 {
     background-color: rgba(0, 0, 0, 0.8);
 }
