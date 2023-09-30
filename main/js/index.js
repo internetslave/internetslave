@@ -40,6 +40,9 @@ function updateThenDisplayReflections()
 
 
 
+
+
+
 //click event listener to button 
 const btn = document.getElementById('toggle-btn');
 

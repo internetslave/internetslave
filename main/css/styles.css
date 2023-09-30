@@ -1,12 +1,13 @@
-:root /* applies to the entire thing, overrides everything*/ 
-{
+
+/* applies to the entire thing, overrides everything*/
+:root  {
     background-color: black; 
     font-family: monospace; 
 
 }
 
-.body /* parent container */
-{
+/* parent container */
+.body {
     display: flex;
     flex-direction: column; 
 
@@ -15,8 +16,8 @@
 
 }
 
-.header  /* nested flex container*/ 
-{
+/* nested flex container*/ 
+.header  {
     display:flex; 
     justify-content: space-between; /* first item - start line, last item-end line*/ 
     align-items: center; 
@@ -28,17 +29,16 @@
 
 }
 
-.logo /* container nested inside header  */ 
-{
+/* container nested inside header  */ 
+.logo {
     display:flex; 
     align-items: center; 
 
     margin: 2rem; /* space away from border */ 
-  
 }
 
-.header-buttons /* container nested inside header container */ 
-{
+/* container nested inside header container */
+.header-buttons  {
     display:flex; 
     align-items: center; 
 
@@ -46,8 +46,7 @@
 }
 
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
-.sitename h1 
-{   
+.sitename h1 {   
     color: white; 
     font-size: clamp(1.5rem, 2.5vw, 4rem); /* built in function that allows text to grow/shrink with viewport*/
 
@@ -62,41 +61,35 @@
       typing 3.5s steps(30, end),
       blink-caret .5s step-end infinite;
 }
-  
-@keyframes typing /*typing effect*/ 
-{
+
+/*typing effect*/ 
+@keyframes typing {
     from { width: 0 }
     to { width: 100% }
 }
-  
-@keyframes blink-caret /* typewriter cursor effect */ 
-{
+
+/* typewriter cursor effect */ 
+@keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: green }
 }
   
-
-
-
-
-
-.vertical-flex-container /*parent flex for main content */ 
-{
+/*parent flex for main content */ 
+.vertical-flex-container {
     display: flex;
     justify-content:center;
 
 }
 
-.header-1 h2, .header-2 h2
-{
+.header-1 h2, .header-2 h2{
     font-size: clamp(1rem, 2vw, 3rem);
     color: white; 
     text-decoration: underline; 
     text-align: center; 
 }
 
-.column-1, .column-2 /* child of vertical flex container */ 
-{
+/* child of vertical flex container */ 
+.column-1, .column-2 {
     
     display:flex; 
     flex-direction:column; 
@@ -113,9 +106,8 @@
     overflow: auto; 
 }
 
-
-.justification /* child of column-1 */ 
-{
+/* child of column-1 */ 
+.justification {
     background-color: black; 
     color: green; 
 
@@ -132,8 +124,7 @@
 
 
 /* child of column -2 (all the navigation buttons)*/ 
-.reflection-btns
-{   
+.reflection-btns{   
     display:flex;
     flex-direction:column; /* aligns them vertically */ 
     align-items: center;
@@ -142,9 +133,8 @@
 
 
 
-/* style buttons all together = consistentcy */ 
-#toggle-btn, .reflection-btns>a, .github-button
-{ 
+/* style buttons all together = consistency */ 
+#toggle-btn, .reflection-btns>a, .github-button{ 
     font-family: monospace; 
     background-color: green;
     color: white;  
@@ -164,25 +154,21 @@
     cursor: pointer;
 }
 
-#toggle-btn:hover, .reflection-btns >a:hover, .github-button:hover
-{
+#toggle-btn:hover, .reflection-btns >a:hover, .github-button:hover{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 
 /*these sizes are distinct however*/ 
-.github-button
-{
+.github-button{
     width: clamp(3vw, 3vw, 5vw); 
     height: clamp(3vw, 3vw, 5vw);
 }
 
-#toggle-btn /* child of header-buttons container*/ 
-{
+#toggle-btn /* child of header-buttons container*/ {
     font-size: clamp(1rem, 2vw, 3rem);
 }
 
-.reflection-btns > a  /*style all the items inside the flex container */ 
-{
+.reflection-btns > a  /*style all the items inside the flex container */ {
     font-size: clamp(0.8rem, 1.5vw, 2rem);
 }
