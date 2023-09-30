@@ -37,13 +37,7 @@
     margin: 2rem; /* space away from border */ 
 }
 
-/* container nested inside header container */
-.header-buttons  {
-    display:flex; 
-    align-items: center; 
 
-    margin: 2rem; 
-}
 
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
 .sitename h1 {   
@@ -124,17 +118,23 @@
 
 
 /* child of column -2 (all the navigation buttons)*/ 
-.reflection-btns{   
+.button{   
     display:flex;
     flex-direction:column; /* aligns them vertically */ 
     align-items: center;
 
 }
 
+#toggle-btn /* child of header-buttons container*/ {
+    font-size: clamp(1rem, 2vw, 3rem);
+}
 
+.button > a  /*style all the items inside the flex container */ {
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
+}
 
 /* style buttons all together = consistency */ 
-#toggle-btn, .reflection-btns>a, .github-button{ 
+#toggle-btn, .button>a{ 
     font-family: monospace; 
     background-color: green;
     color: white;  
@@ -154,21 +154,6 @@
     cursor: pointer;
 }
 
-#toggle-btn:hover, .reflection-btns >a:hover, .github-button:hover{
+#toggle-btn:hover, .button>a:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/*these sizes are distinct however*/ 
-.github-button{
-    width: clamp(3vw, 3vw, 5vw); 
-    height: clamp(3vw, 3vw, 5vw);
-}
-
-#toggle-btn /* child of header-buttons container*/ {
-    font-size: clamp(1rem, 2vw, 3rem);
-}
-
-.reflection-btns > a  /*style all the items inside the flex container */ {
-    font-size: clamp(0.8rem, 1.5vw, 2rem);
 }
