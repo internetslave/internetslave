@@ -1,16 +1,14 @@
 // https://bobbyhadz.com/blog/javascript-change-button-text-on-click
 
 
-function replaceText(selector, target, replacement)
-{
+function replaceText(selector, target, replacement){
   const targetNode = document.querySelector(selector);
   const text = targetNode.innerText;
   targetNode.innerText = text.replace(target, replacement);
 }
 
 
-function updateThenDisplayValues()
-{
+function updateThenDisplayValues(){
 
   replaceText("#favicon", "Reflections", "Values"); 
 
@@ -23,8 +21,7 @@ function updateThenDisplayValues()
   
 }
 
-function updateThenDisplayReflections()
-{
+function updateThenDisplayReflections(){
   replaceText("#favicon", "Values", "Reflections");
 
   replaceText("#h1", "Core Value : Privacy", "Why I reflect");
@@ -38,32 +35,24 @@ function updateThenDisplayReflections()
 
 
 
-
-
-
-
-
 //click event listener to button 
 const btn = document.getElementById('toggle-btn');
 
 // toggle button text on click
 
 //inbuilt javascript function
-btn.addEventListener('click', function handleClick() 
-{
+btn.addEventListener('click', function handleClick() {
   // each time the button is clicked check if the text is the initial text
   const initialText = 'Values';
 
   // if the initialtext matches change to clicked text (if values (once clicked) --> change to Reflections)
-  if (btn.textContent.toLowerCase().includes(initialText.toLowerCase()))
-    {
+  if (btn.textContent.toLowerCase().includes(initialText.toLowerCase())){
       let text = updateThenDisplayValues(); // calling function - invoking it through it's name
       btn.textContent = 'Reflections'; 
     } 
 
   // otherwise change it back to the initialtext
-  else
-  {
+  else{
     let text = updateThenDisplayReflections(); 
     btn.textContent = initialText;
   }
