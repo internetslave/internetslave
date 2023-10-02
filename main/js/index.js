@@ -36,25 +36,25 @@ function updateThenDisplayReflections(){
 
 
 //click event listener to button 
-const btn = document.getElementById('toggle-btn');
+const button = document.getElementById('toggle-btn');
 
 // toggle button text on click
 
 //inbuilt javascript function
-btn.addEventListener('click', function handleClick() {
+button.addEventListener('click', function handleClick() {
   // each time the button is clicked check if the text is the initial text
   const initialText = 'Values';
 
   // if the initialtext matches change to clicked text (if values (once clicked) --> change to Reflections)
-  if (btn.textContent.toLowerCase().includes(initialText.toLowerCase())){
+  if (button.textContent.toLowerCase().includes(initialText.toLowerCase())){
       let text = updateThenDisplayValues(); // calling function - invoking it through it's name
-      btn.textContent = 'Reflections'; 
+      button.textContent = 'Reflections'; 
     } 
 
   // otherwise change it back to the initialtext
   else{
     let text = updateThenDisplayReflections(); 
-    btn.textContent = initialText;
+    button.textContent = initialText;
   }
 
 });

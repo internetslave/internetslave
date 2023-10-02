@@ -13,130 +13,40 @@
 
     min-height: 100vh; /* layout takes full height of viewport screen */ 
     min-width: 100vw;
-
 }
 
 
-
-
 /* nested flex container*/ 
-.nav-bar  {
+.header  {
     display:flex; 
-    justify-content: space-between; /* first item - start line, last item-end line*/ 
     align-items: center; 
 
     height: 15vh; /* layout fits on one page - no scrolling necessary*/
     width: 100%; 
 
     background-color: #1b1e20; 
-
 }
 
-/* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
-.nav-bar h1 {   
-    color: white; 
-    font-size: clamp(1.5rem, 2.5vw, 4rem); /* built in function that allows text to grow/shrink with viewport*/
-
-    overflow: hidden; /* content not revealed until animation */
-
-    /* make all lengths ems - so it depends on font size */ 
-    border-right: .15rem solid green; /* typwriter cursor */
-    white-space: nowrap; /*content on a single line */
-    margin: 0 auto; /*scrolling effect as the typing happens */
-    letter-spacing: .15rem; 
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
+.header img { /*both the github icon / and the profile pic */ 
+    width: clamp(2vw,2.5vw,10vw); 
+    height: clamp(2vw,2.5vw, 10vw); 
 }
-
-/*typing effect*/ 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 20% }
-}
-
-/* typewriter cursor effect */ 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    20% { border-color: green }
-}
-  
-/*parent flex for main content */ 
-.vertical-flex-container {
-    display: flex;
-    justify-content:center;
-
-}
-
-
-
-
-
-
-
-
-
-.header-1 h2, .header-2 h2{
-    font-size: clamp(1rem, 2vw, 3rem);
-    color: white; 
-    text-decoration: underline; 
-    text-align: center; 
-}
-
-/* child of vertical flex container */ 
-.column-1, .column-2 {
-    
-    display:flex; 
-    flex-direction:column; 
-    
-    width: 30%;
-    height: 65vh; 
-    padding: 2rem;
-
-
-    font-size: clamp(0.8rem, 1vw, 2rem);
-    background-color: #1b1e20; 
-    border: green solid 5px;
-    margin: 2rem; /* spaces it away from header */ 
-    overflow: auto; 
-}
-
-/* child of column-1 */ 
-.justification {
-    background-color: black; 
-    color: green; 
-
-
-    text-align: center;
-    flex-wrap: nowrap; 
-    padding: 1rem; 
-    flex-shrink:0; 
-
-    overflow:auto; 
-
-}
-
-
-
-
-
 
 /* style buttons all together = consistency */ 
-.button {   
-    display:flex;
+.column-btns {   
+    display:flex; 
     flex-direction:column; 
     align-items: center;
 }
 
-#toggle-btn {
-    font-size: clamp(1rem, 2vw, 3rem);
+.column-btns>a {
+    font-size: clamp(0.5rem, 1.3vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
+.header-btns>button {
+    font-size: clamp(2rem, 2.5vw, 3rem);
 
-.button > a {
-    font-size: clamp(0.8rem, 1.5vw, 2rem);
 }
-
-#toggle-btn, .button>a { 
+.header-btns>button, .column-btns>a { 
     font-family: monospace; 
     background-color: green;
     color: white;  
@@ -156,6 +66,91 @@
     cursor: pointer;
 }
 
-#toggle-btn:hover, .button>a:hover {
+.header-btns>button:hover, .column-btns>a:hover{
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+/* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
+.header h1 {   
+    color: white; 
+
+    /* font size clamp isn't working */ 
+    font-size: clamp(3rem, 4vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
+
+    overflow: hidden; /* content not revealed until animation */
+
+    /* make all lengths ems - so it depends on font size */ 
+    border-right: .15rem solid green; /* typwriter cursor */
+    white-space: nowrap; /*content on a single line */
+    margin: 0 auto; /*scrolling effect as the typing happens */
+    letter-spacing: .15rem; 
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+}
+
+/*typing effect*/ 
+@keyframes typing {
+    from { width: 0 }
+    to { width: 32% }
+}
+
+/* typewriter cursor effect */ 
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    32% { border-color: green }
+}
+
+
+
+
+
+
+  
+/*parent flex for main content */ 
+.vertical-flex-container {
+    display: flex;
+    justify-content:center;
+
+}
+
+.header-1 h2, .header-2 h2{
+    font-size: clamp(1rem, 2vw, 3rem);
+    color: white; 
+    text-decoration: underline; 
+    text-align: center; 
+}
+
+/* child of vertical flex container */ 
+.column-1, .column-2 {
+    display:flex; 
+    flex-direction:column; 
+    
+    width: 30%;
+    height: 65vh; 
+    padding: 2rem;
+
+    font-size: clamp(0.8rem, 1vw, 2rem);
+    background-color: #1b1e20; 
+    border: green solid 5px;
+    margin: 2rem; /* spaces it away from header */ 
+    overflow: auto; 
+}
+
+/* child of column-1 */ 
+.justification {
+    background-color: black; 
+    color: green; 
+
+    text-align: center;
+    flex-wrap: nowrap; 
+    padding: 1rem; 
+    flex-shrink:0; 
+
+    overflow:auto; 
+}
+
+
+
+
