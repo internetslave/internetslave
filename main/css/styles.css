@@ -25,12 +25,10 @@
     width: 100%; 
 
     background-color: #1b1e20; 
+
+    justify-content:center; /* NOT DOING ANYTHING !!!!!!!!!!!!!11 */
 }
 
-.header img { /*both the github icon / and the profile pic */ 
-    width: clamp(2vw,2.5vw,10vw); 
-    height: clamp(2vw,2.5vw, 10vw); 
-}
 
 /* style buttons all together = consistency */ 
 .column-btns {   
@@ -40,10 +38,10 @@
 }
 
 .column-btns>a {
-    font-size: clamp(0.5rem, 1.3vw, 2rem); /* rem - relative to browser based fontsize*/ 
+    font-size: clamp(0.8rem, 1.3vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 .header-btns>button {
-    font-size: clamp(2rem, 2.5vw, 3rem);
+    font-size: clamp(1rem, 2.5vw, 3rem);
 
 }
 .header-btns>button, .column-btns>a { 
@@ -76,7 +74,7 @@
     color: white; 
 
     /* font size clamp isn't working */ 
-    font-size: clamp(3rem, 4vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
+    font-size: clamp(2rem, 4vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
 
     overflow: hidden; /* content not revealed until animation */
 
