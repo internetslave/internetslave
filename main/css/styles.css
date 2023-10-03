@@ -30,7 +30,7 @@
 }
 
 .column-btns>a {
-    font-size: clamp(0.8rem, 1.3vw, 2rem); /* rem - relative to browser based fontsize*/ 
+    font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 
 .header-btns>button {
@@ -39,6 +39,8 @@
 }
 
 .header-btns>button, .column-btns>a { 
+
+
     font-family: monospace; 
     background-color: green;
     color: white;  
@@ -77,7 +79,6 @@
     white-space: nowrap; /*content on a single line */
     margin: 7.6%; /*scrolling effect as the typing happens */
 
-    /*100px*/ /*20%- want shit at the end */
     letter-spacing: .15rem; 
     animation: 
       typing 3.5s steps(30, end),
