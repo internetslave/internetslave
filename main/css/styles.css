@@ -1,13 +1,9 @@
-
-/* applies to the entire thing, overrides everything*/
-:root  {
+:root  {  /* applies to the entire thing, overrides everything*/
     background-color: black; 
     font-family: monospace; 
-
 }
 
-/* parent container */
-.body {
+.body { /* parent container */
     display: flex;
     flex-direction: column; 
 
@@ -15,9 +11,7 @@
     min-width: 100vw;
 }
 
-
-/* nested flex container*/ 
-.header  {
+.header  { /* nested flex container*/ 
     display:flex; 
     justify-content:center; 
     align-items: center; 
@@ -29,9 +23,7 @@
 
 }
 
-
-/* style buttons all together = consistency */ 
-.column-btns {   
+.column-btns {   /* style buttons all together = consistency */ 
     display:flex; 
     flex-direction:column; 
     align-items: center;
@@ -40,10 +32,12 @@
 .column-btns>a {
     font-size: clamp(0.8rem, 1.3vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
+
 .header-btns>button {
     font-size: clamp(1rem, 2.5vw, 3rem);
 
 }
+
 .header-btns>button, .column-btns>a { 
     font-family: monospace; 
     background-color: green;
@@ -90,14 +84,14 @@
       blink-caret .5s step-end infinite;
 }
 
-/*typing effect*/ 
-@keyframes typing {
+@keyframes typing { /*typing effect*/ 
+
     from { width: 0 }
     to { width: 30% }
 }
 
-/* typewriter cursor effect */ 
-@keyframes blink-caret {
+@keyframes blink-caret { /* typewriter cursor effect */ 
+
     from, to { border-color: transparent }
     30% { border-color: green }
 }
@@ -106,24 +100,13 @@
 
 
 
-
-  
-/*parent flex for main content */ 
-.vertical-flex-container {
+.vertical-flex-container { /*parent flex for main content */ 
     display: flex;
     justify-content:center;
 
 }
 
-.header-1 h2, .header-2 h2{
-    font-size: clamp(1rem, 2vw, 3rem);
-    color: white; 
-    text-decoration: underline; 
-    text-align: center; 
-}
-
-/* child of vertical flex container */ 
-.column-1, .column-2 {
+.column { /* child of vertical flex container */ 
     display:flex; 
     flex-direction:column; 
     
@@ -138,8 +121,14 @@
     overflow: auto; 
 }
 
-/* child of column-1 */ 
-.justification {
+.column h2 {
+    font-size: clamp(1rem, 2vw, 3rem);
+    color: white; 
+    text-decoration: underline; 
+    text-align: center; 
+}
+
+.column p { /* justification paragraph for why I reflect */ 
     background-color: black; 
     color: green; 
 
