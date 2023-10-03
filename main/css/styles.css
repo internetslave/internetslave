@@ -19,6 +19,7 @@
 /* nested flex container*/ 
 .header  {
     display:flex; 
+    justify-content:center; 
     align-items: center; 
 
     height: 15vh; /* layout fits on one page - no scrolling necessary*/
@@ -26,7 +27,6 @@
 
     background-color: #1b1e20; 
 
-    justify-content:center; /* NOT DOING ANYTHING !!!!!!!!!!!!!11 */
 }
 
 
@@ -69,19 +69,21 @@
 }
 
 
+
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
 .header h1 {   
     color: white; 
 
-    /* font size clamp isn't working */ 
-    font-size: clamp(2rem, 4vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
+    font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
 
     overflow: hidden; /* content not revealed until animation */
 
     /* make all lengths ems - so it depends on font size */ 
     border-right: .15rem solid green; /* typwriter cursor */
     white-space: nowrap; /*content on a single line */
-    margin: 0 auto; /*scrolling effect as the typing happens */
+    margin: 7.6%; /*scrolling effect as the typing happens */
+
+    /*100px*/ /*20%- want shit at the end */
     letter-spacing: .15rem; 
     animation: 
       typing 3.5s steps(30, end),
@@ -91,13 +93,13 @@
 /*typing effect*/ 
 @keyframes typing {
     from { width: 0 }
-    to { width: 32% }
+    to { width: 30% }
 }
 
 /* typewriter cursor effect */ 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    32% { border-color: green }
+    30% { border-color: green }
 }
 
 
