@@ -37,7 +37,7 @@
 /* no styling of just header btns so far */ 
 
 .header-btns>button, #drop-btn { /* styles toggle button */ 
-    font-size: clamp(1rem, 2vw, 3rem); 
+    font-size: clamp(0.2rem, 2vw, 3rem); 
 }
 
 .header-btns>button, .column-btns>a, #drop-btn, .dropdown-content>a { 
