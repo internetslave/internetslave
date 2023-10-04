@@ -34,26 +34,43 @@ function updateThenDisplayReflections(){
 }
 
 
-//click event listener to button 
-const button = document.getElementById('toggle-btn');
 
-// toggle button text on click
+function removeBtn(selector,target)
+{
+  const targetNode = document.querySelector(selector); // returns all the selectors 
+  const text = targetNode.innerText;
+  targetNode.innerText = text.remove(target); // removes target 
 
-//inbuilt javascript function
-button.addEventListener('click', function handleClick() {
-  // each time the button is clicked check if the text is the initial text
-  const initialText = 'Values';
+}
+
+function addBtn(selector, target)
+{
+  const targetNode = document.querySelector(selector);
+  const text = targetNode.innerText;
+  targetNode.innerText=text.add(target);
+}
+
+const button = document.getElementById('toggle-btn'); //click event listener to button 
+
+button.addEventListener('click', function handleClick() { //inbuilt javascript function
+
+  const initialText = 'Values';   // each time the button is clicked check if the text is the initial text
 
   // if the initialtext matches change to clicked text (if values (once clicked) --> change to Reflections)
   if (button.textContent.toLowerCase().includes(initialText.toLowerCase())){
       let text = updateThenDisplayValues(); // calling function - invoking it through it's name
       button.textContent = 'Reflections'; 
-    } 
 
-  // otherwise change it back to the initialtext
-  else{
+      // returns all the selectors inside column btns. for each selector there with the following appropriate text--> remove it. 
+      document.querySelectorAll('column-btns').forEach(selector=>selector.removeBtn.remove("CERT Mentor - leadership", "Trinity School - internship", "Students in Classrooms - internship", ""));
+
+
+
+    } 
+  else {   // otherwise change it back to the initialtext
+
     let text = updateThenDisplayReflections(); 
     button.textContent = initialText;
+    
   }
-
 });
