@@ -64,8 +64,6 @@ button.addEventListener('click', function handleClick() { //inbuilt javascript f
       // returns all the selectors inside column btns. for each selector there with the following appropriate text--> remove it. 
       document.querySelectorAll('column-btns').forEach(selector=>selector.removeBtn.remove("CERT Mentor - leadership", "Trinity School - internship", "Students in Classrooms - internship", ""));
 
-
-
     } 
   else {   // otherwise change it back to the initialtext
 
