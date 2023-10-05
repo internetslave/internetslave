@@ -23,13 +23,13 @@
 
 }
 
-.column-btns {   /* style buttons all together = consistency */ 
+.reflection-btns, .tools-btns {   /* style buttons all together = consistency */ 
     display:flex; 
     flex-direction:column; 
     align-items: center;
 }
 
-.column-btns>a {
+.reflection-btns>a, .tool-btns>a {
     font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 
@@ -38,7 +38,7 @@
 
 }
 
-.header-btns>button, .column-btns>a { 
+.header-btns>button, .reflection-btns>a, .tools-btns>a { 
 
 
     font-family: monospace; 
@@ -60,11 +60,14 @@
     cursor: pointer;
 }
 
-.header-btns>button:hover, .column-btns>a:hover{
+.header-btns>button:hover, .reflection-btns>a:hover, .tools-btns>a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-
+.hide /* hiding irrelevant buttons that aren't associated with toggle*/ 
+{
+    display:none; 
+}
 
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
 .header h1 {   
