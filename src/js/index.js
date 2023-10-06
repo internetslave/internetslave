@@ -56,7 +56,7 @@ toggleButton.addEventListener("click", () => {
 
 
     /* when i click on the values button all the reflection btns successfully dissapear*/
-    /* however there is no tools btns remaining - displaying  ISSUE*********8 */ 
+    /* however there is no tools btns remaining - displaying  ISSUE********* */ 
 
     /* when i click back on reflections btns all the reflections btns reappear again*/
 

@@ -22,13 +22,27 @@
         <h1> internet-slave </h1>
 
         <nav class="header-btns"> 
+            
             <button id="toggle-btn"> Values</button>
             <script defer src="./src/js/index.js"></script>
+
+
+            <!-- 
+            <button id="toggle-btn"> 
+                <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+                <label for="toggle-on" class="toggle-btn">Reflections</label>
+                <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+                <label for="toggle-off" class="toggle-btn">Values</label>
+            </button>
+            -->
+
 
             <button> <a href = "https://github.com/internetslave">  <img src="./src/img/github.png" alt = "github icon" style="width: clamp(2vw,2.5vw,3vw); 
                 height: clamp(2vw,2.5vw,3vw)"></style> </a> </button>
         </nav>  
 
+  
+  
     </header>
 
 
@@ -65,16 +79,17 @@
                     <a href="./src/reflection-subpages/library-student-mentor.html">Library Student Mentor: leadership</a>
                 </nav>
 
-                <nav id="tools-btns" class="tools-btns"> <!--hidden until toggle button clicked-->
+                <nav id="tools-btns" class="tools-btns hide"> <!--hidden until toggle button is clicked then it replaces reflection btns-->
                     <a href="./src/tools-subpages/arch.html"> Arch: laptop OS </a>
                     <a href="./src/tools-subpages/graphene.html"> Graphene: mobile OS </a>
                     <a href="./src/tools-subpages/monero.html"> Monero: cryptocurrency </a>
                     <a href="./src/tools-subpages/pi-hole.html"> Pi-hole: adblocker </a>
                 </nav>
 
-
-
             </section>
+
+
+            
 
         </article>
     </main>
