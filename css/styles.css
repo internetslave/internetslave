@@ -6,7 +6,6 @@
 .body { /* parent container */
     display: flex;
     flex-direction: column; 
-
     min-height: 100vh; /* layout takes full height of viewport screen */ 
     min-width: 100vw;
 }
@@ -15,12 +14,9 @@
     display:flex; 
     justify-content:center; 
     align-items: center; 
-
     height: 15vh; /* layout fits on one page - no scrolling necessary*/
     width: 100%; 
-
     background-color: #1b1e20; 
-
 }
 
 .reflection-btns, .tools-btns {   /* style buttons all together = consistency */ 
@@ -33,77 +29,61 @@
     font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 
-
-/* no styling of just header btns so far */ 
-
 .header-btns>button, #drop-btn { /* styles toggle button */ 
     font-size: clamp(0.2rem, 2vw, 3rem); 
 }
-
-
-
 
 #toggle-btn {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     background: white;
     font-size: clamp(0.7rem, 1.7vw, 2rem);
-
     border-radius: 4px; 
     border: 2px solid white;
     border-width: 2px; 
     box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
-
     transition-duration: 0.4s;
     cursor: pointer;
-  }
-  
-  input[type="radio"].toggle {
+}
+
+input[type="radio"].toggle {
     display: none;
-  }
+}
   
-  input[type="radio"].toggle + label {
+input[type="radio"].toggle + label {
     cursor: pointer;
     padding: 0.8rem;
     border-radius:4px; 
-  }
+}
   
-  input[type="radio"].toggle + label:hover {
+input[type="radio"].toggle + label:hover {
     color: green;
-  }
+}
   
-  input[type="radio"].toggle:checked + label {
+input[type="radio"].toggle:checked + label {
     cursor: default;
     color: black;
     transition: color 200ms;
-  }
+}
   
-  input[type="radio"].toggle:checked + label {
+input[type="radio"].toggle:checked + label {
     background: green;
     color: white;
-  }
+}
   
-
-
-
 .header-btns>button, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn{ 
-
-
     font-family: monospace; 
     background-color: green;
     color: white;
     text-align:center;
     text-decoration:none;   
-
     gap: 2.5rem; 
     margin:1rem; 
     padding: 0.5rem; 
-    
     border-radius: 8px; 
     border: 2px solid white;
     border-width: 2px; 
     box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
-
     transition-duration: 0.4s;
     cursor: pointer;
 }
@@ -111,10 +91,6 @@
 .header-btns>button:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-
-
-
 
 .hide /* hiding irrelevant buttons that aren't associated with toggle*/ 
 {
@@ -124,16 +100,12 @@
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
 .header h1 {   
     color: white; 
-
     font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
-
     overflow: hidden; /* content not revealed until animation */
-
     /* make all lengths ems - so it depends on font size */ 
     border-right: .15rem solid green; /* typwriter cursor */
     white-space: nowrap; /*content on a single line */
     margin: 7.6%; /*scrolling effect as the typing happens */
-
     letter-spacing: .15rem; 
     animation: 
       typing 3.5s steps(30, end),
@@ -141,35 +113,26 @@
 }
 
 @keyframes typing { /*typing effect*/ 
-
     from { width: 0 }
     to { width: 30% }
 }
 
 @keyframes blink-caret { /* typewriter cursor effect */ 
-
     from, to { border-color: transparent }
     30% { border-color: green }
 }
 
-
-
-
-
 .vertical-flex-container { /*parent flex for main content */ 
     display: flex;
     justify-content:center;
-
 }
 
 .column { /* child of vertical flex container */ 
     display:flex; 
     flex-direction:column; 
-    
     width: 30%;
     height: 65vh; 
     padding: 2rem;
-
     font-size: clamp(0.8rem, 1vw, 2rem);
     background-color: #1b1e20; 
     border: green solid 5px;
@@ -187,25 +150,14 @@
 .column p { /* justification paragraph for why I reflect */ 
     background-color: black; 
     color: green; 
-
     text-align: center;
     flex-wrap: nowrap; 
     padding: 1rem; 
     flex-shrink:0; 
-
     overflow:auto; 
 }
 
-
-
-
-
-
-
-
-/* NAVIGATION BAR DROP DOWN MENU */ 
-
-.dropdown{
+.dropdown{ /* DROPDOWN MENU FOR SUBPAGES*/ 
     position: relative;
     display: inline-block;
 }
