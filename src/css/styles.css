@@ -38,6 +38,56 @@
 
 }
 
+
+
+
+  
+
+#togl-btn {
+    border: 0.3rem solid green;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    background: white;
+  }
+  
+  input[type="radio"].toggle {
+    display: none;
+  }
+  
+  input[type="radio"].toggle + label {
+    cursor: pointer;
+    padding: 0.375rem;
+  }
+  
+  input[type="radio"].toggle + label:hover {
+    color: green;
+  }
+  
+  input[type="radio"].toggle:checked + label {
+    cursor: default;
+    color: black;
+    transition: color 200ms;
+  }
+  
+  input[type="radio"].toggle:checked + label {
+    background: green;
+    color: white;
+  }
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
 .header-btns>button, .reflection-btns>a, .tools-btns>a { 
 
 
