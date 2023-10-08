@@ -86,7 +86,7 @@
 
 
 
-.header-btns>button, .reflection-btns>a, .tools-btns>a{ 
+.header-btns>button, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn{ 
 
 
     font-family: monospace; 
