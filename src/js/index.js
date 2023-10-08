@@ -52,7 +52,7 @@ toggleButton.addEventListener('click', function handleClick() { //inbuilt javasc
 
 toggleButton.addEventListener("click", () => { 
     const hideReflections = document.querySelector("#reflection-btns"); 
-    const hideTools = document.querySelector("#tool-btns"); 
+    const hideTools = document.querySelector("#tools-btns"); 
 
 
     /* when i click on the values button all the reflection btns successfully dissapear*/
