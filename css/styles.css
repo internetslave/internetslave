@@ -97,8 +97,7 @@ input[type="radio"].toggle:checked + label {
     display:none; 
 }
 
-/* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
-.header h1 {   
+.header h1 {   /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
     color: white; 
     font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
     overflow: hidden; /* content not revealed until animation */
