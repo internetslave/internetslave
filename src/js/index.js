@@ -28,7 +28,6 @@ function updateThenDisplayReflections(){
 }
 
 
-// doesn't work if it is query selector..
 const toggleButton = document.getElementById('toggle-btn'); //click event listener to button 
 
 toggleButton.addEventListener('click', function handleClick() { //inbuilt javascript function

@@ -38,12 +38,56 @@
 
 }
 
-.header-btns>button, .reflection-btns>a, .tools-btns>a { 
+
+
+
+  
+
+#togl-btn {
+    border: 0.7rem solid white;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background: white;
+
+    border-radius: 4px; 
+    font-size: clamp(1rem, 1.7vw, 2rem);
+
+  }
+  
+  input[type="radio"].toggle {
+    display: none;
+  }
+  
+  input[type="radio"].toggle + label {
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius:4px; 
+  }
+  
+  input[type="radio"].toggle + label:hover {
+    color: green;
+  }
+  
+  input[type="radio"].toggle:checked + label {
+    cursor: default;
+    color: black;
+    transition: color 200ms;
+  }
+  
+  input[type="radio"].toggle:checked + label {
+    background: green;
+    color: white;
+  }
+  
+
+
+
+.header-btns>button, .reflection-btns>a, .tools-btns>a{ 
 
 
     font-family: monospace; 
     background-color: green;
-    color: white;  
+    color: white;
     text-align:center;
     text-decoration:none;   
 
@@ -63,6 +107,10 @@
 .header-btns>button:hover, .reflection-btns>a:hover, .tools-btns>a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+
+
 
 .hide /* hiding irrelevant buttons that aren't associated with toggle*/ 
 {
