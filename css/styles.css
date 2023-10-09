@@ -23,6 +23,7 @@
     display:flex; 
     flex-direction:column; 
     align-items: center;
+    gap: 2rem;
 }
 
 .reflection-btns>a, .tool-btns>a {
@@ -77,8 +78,6 @@ input[type="radio"].toggle:checked + label {
     color: white;
     text-align:center;
     text-decoration:none;   
-    gap: 2.5rem; 
-    margin:1rem; 
     padding: 0.6rem; 
     border-radius: 8px; 
     border: 2px solid white;
