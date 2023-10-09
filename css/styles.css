@@ -71,6 +71,8 @@ input[type="radio"].toggle:checked + label {
     color: white;
 }
   
+
+
 .header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn{ 
     font-family: monospace; 
     background-color: green;
