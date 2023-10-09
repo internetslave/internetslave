@@ -29,8 +29,8 @@
     font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 
-.header-btns>a, #drop-btn { /* styles toggle button */ 
-    font-size: clamp(0.2rem, 2vw, 3rem); 
+.header-btns>a, #drop-btn, #toggle-btn { /* styles toggle button */ 
+    font-size: clamp(0.4rem, 1vw, 2rem); 
 }
 
 #toggle-btn {
@@ -71,8 +71,6 @@ input[type="radio"].toggle:checked + label {
     color: white;
 }
   
-
-
 .header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn{ 
     font-family: monospace; 
     background-color: green;
@@ -99,7 +97,7 @@ input[type="radio"].toggle:checked + label {
     display:none; 
 }
 
-.header h1 {   /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
+.header h1 {    
     color: white; 
     font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
     overflow: hidden; /* content not revealed until animation */
@@ -167,14 +165,14 @@ input[type="radio"].toggle:checked + label {
     display: none;
     position: absolute;
     background-color: #1b1e20;
-    min-width: 160px;
-    padding: 12px 16px; 
+    min-width: 2rem; 
     z-index:1; 
 }
 
-.dropdown-content a {
+.dropdown-content>a {
     padding: 12px;
     display: block;
+    font-size: clamp(0.6rem, 1vw, 2rem); 
 }
 
 .dropdown:hover .dropdown-content{
