@@ -29,7 +29,7 @@
     font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 
-.header-btns>button, #drop-btn { /* styles toggle button */ 
+.header-btns>a, #drop-btn { /* styles toggle button */ 
     font-size: clamp(0.2rem, 2vw, 3rem); 
 }
 
@@ -71,7 +71,7 @@ input[type="radio"].toggle:checked + label {
     color: white;
 }
   
-.header-btns>button, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn{ 
+.header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn{ 
     font-family: monospace; 
     background-color: green;
     color: white;
@@ -79,7 +79,7 @@ input[type="radio"].toggle:checked + label {
     text-decoration:none;   
     gap: 2.5rem; 
     margin:1rem; 
-    padding: 0.5rem; 
+    padding: 0.6rem; 
     border-radius: 8px; 
     border: 2px solid white;
     border-width: 2px; 
@@ -88,7 +88,7 @@ input[type="radio"].toggle:checked + label {
     cursor: pointer;
 }
 
-.header-btns>button:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover {
+.header-btns>a:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
