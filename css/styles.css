@@ -132,8 +132,8 @@ input[type="radio"].toggle:checked + label {
     font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 
-.header-btns>a, #drop-btn { /* styles toggle button */ 
-    font-size: clamp(0.2rem, 2vw, 3rem); 
+.header-btns>a, #drop-btn { 
+    font-size: clamp(0.2rem, 1vw, 2rem); 
 }
 
 .hide {  
@@ -199,14 +199,15 @@ input[type="radio"].toggle:checked + label {
     display: none;
     position: absolute;
     background-color: #1b1e20;
-    min-width: 160px;
-    padding: 12px 16px; 
+    padding: 4%, 8%; 
     z-index:1; 
 }
 
 .dropdown-content a {
-    padding: 12px;
+    padding: 5%; /* spacing between each button*/ 
     display: block;
+    font-size: clamp(0.2rem, 1vw, 2rem); 
+
 }
 
 .dropdown:hover .dropdown-content{
