@@ -20,49 +20,25 @@
     background-color: #1b1e20; 
 }
 
-.header-btns{
-    display:flex;
-    align-items:center;
+.reflection-btns, .tools-btns {   /* style buttons all together = consistency */ 
+    display:flex; 
+    flex-direction:column; 
+    align-items: center;
 }
 
-
-
-
-
-
-
-.header h1 {   /* STYLING TITLE*/
-    color: white; 
-    font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
-    overflow: hidden; /* content not revealed until animation */
-    /* make all lengths ems - so it depends on font size */ 
-    border-right: .15rem solid green; /* typwriter cursor */
-    white-space: nowrap; /*content on a single line */
-    margin: 7.6%; /*scrolling effect as the typing happens */
-    letter-spacing: .15rem; 
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
+.reflection-btns>a, .tool-btns>a {
+    font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 
-@keyframes typing { /*typing effect*/ 
-    from { width: 0 }
-    to { width: 30% }
+.header-btns>a, #drop-btn { /* styles toggle button */ 
+    font-size: clamp(0.2rem, 2vw, 3rem); 
 }
 
-@keyframes blink-caret { /* typewriter cursor effect */ 
-    from, to { border-color: transparent }
-    30% { border-color: green }
-}
-
-
-
-
-
-#toggle-btn { /* STYLING TOGGLE */
+#toggle-btn {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     background: white;
+    font-size: clamp(0.7rem, 1.7vw, 2rem);
     border-radius: 4px; 
     border: 2px solid white;
     border-width: 2px; 
@@ -95,15 +71,9 @@ input[type="radio"].toggle:checked + label {
     background: green;
     color: white;
 }
-
-.hide /* hiding irrelevant buttons that aren't associated with toggle*/ 
-{
-    display:none; 
-}
+  
 
 
-
-/* STYLING THE REST OF THE BUTTONS */ 
 .header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn{ 
     font-family: monospace; 
     background-color: green;
@@ -111,7 +81,7 @@ input[type="radio"].toggle:checked + label {
     text-align:center;
     text-decoration:none;   
     gap: 2.5rem; 
-    margin:1rem; /* FONT SIZE OF BTNS ISSUE GITHUB BTN HAS NO FONT*/ 
+    margin:1rem; 
     padding: 0.6rem; 
     border-radius: 8px; 
     border: 2px solid white;
@@ -125,28 +95,35 @@ input[type="radio"].toggle:checked + label {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.reflection-btns, .tools-btns {   /* style buttons all together = consistency */ 
-    display:flex; 
-    flex-direction:column; 
-    align-items: center;
+.hide /* hiding irrelevant buttons that aren't associated with toggle*/ 
+{
+    display:none; 
 }
 
-.reflection-btns>a, .tool-btns>a {
-    font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
+.header h1 {   /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
+    color: white; 
+    font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
+    overflow: hidden; /* content not revealed until animation */
+    /* make all lengths ems - so it depends on font size */ 
+    border-right: .15rem solid green; /* typwriter cursor */
+    white-space: nowrap; /*content on a single line */
+    margin: 7.6%; /*scrolling effect as the typing happens */
+    letter-spacing: .15rem; 
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
 }
 
-.header-btns>a, #drop-btn, #toggle-btn { /* all maintain the same size */ 
-    font-size: clamp(0.2rem, 2vw, 3rem); 
+@keyframes typing { /*typing effect*/ 
+    from { width: 0 }
+    to { width: 30% }
 }
 
+@keyframes blink-caret { /* typewriter cursor effect */ 
+    from, to { border-color: transparent }
+    30% { border-color: green }
+}
 
-
-
-
-
-
-
-/* STYLING FLEXBOX COLUMNS */ 
 .vertical-flex-container { /*parent flex for main content */ 
     display: flex;
     justify-content:center;
@@ -155,7 +132,7 @@ input[type="radio"].toggle:checked + label {
 .column { /* child of vertical flex container */ 
     display:flex; 
     flex-direction:column; 
-    width: 32.5%;
+    width: 30%;
     height: 65vh; 
     padding: 2rem;
     font-size: clamp(0.8rem, 1vw, 2rem);
@@ -182,10 +159,6 @@ input[type="radio"].toggle:checked + label {
     overflow:auto; 
 }
 
-
-
-
-
 .dropdown{ /* DROPDOWN MENU FOR SUBPAGES*/ 
     position: relative;
     display: inline-block;
@@ -208,3 +181,4 @@ input[type="radio"].toggle:checked + label {
 .dropdown:hover .dropdown-content{
     display:block;
 }
+
