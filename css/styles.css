@@ -6,7 +6,8 @@
 .body { /* parent container */
     display: flex;
     flex-direction: column; 
-
+    min-height: 100vh; /* layout takes full height of viewport screen */ 
+    min-width: 100vw;
 }
 
 .header  { /* nested flex container*/ 
@@ -14,8 +15,8 @@
     justify-content:center; 
     align-items: center; 
     
-    height: 135px;     /* ISSUE HARD CODED HEIGHT!!!!!!!!! */ 
-
+    height: 15vh; /* layout fits on one page - no scrolling necessary*/
+    width: 100%; 
     background-color: #1b1e20; 
 }
 
@@ -60,20 +61,14 @@
 #toggle-btn { 
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
-
-    /* TYPOGRAPHY*/ 
-    font-size: clamp(0.7rem, 1.7vw, 2rem);
-
-    /* VISUAL*/ 
     background: white;
+    font-size: clamp(0.7rem, 1.7vw, 2rem);
     border-radius: 4px; 
     border: 2px solid white;
     border-width: 2px; 
     box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
-
     transition-duration: 0.4s;
     cursor: pointer;
-
 }
 
 input[type="radio"].toggle {
@@ -117,13 +112,11 @@ input[type="radio"].toggle:checked + label {
     background-color: green;
     color: white;
     text-align:center;
-    text-decoration:none;  
-    
-    margin:1rem; /* ISSEUS!!!!!!!!*/
+    text-decoration:none;   
+    gap: 2.5rem; 
+    margin:1rem; 
     padding: 0.6rem; 
-
-
-    border-radius: 8px; /* ALL THESE HARD CODED VALUES ARE BAD!!!!!!! */
+    border-radius: 8px; 
     border: 2px solid white;
     border-width: 2px; 
     box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
@@ -161,22 +154,14 @@ input[type="radio"].toggle:checked + label {
 .column { /* child of vertical flex container */ 
     display:flex; 
     flex-direction:column; 
-
-
-
-    width: 32.5%; 
-    height: 65vh; /* ISSUE HARD CODED HEIGHT!!!!!!!!! */ 
+    width: 32.5%;
+    height: 65vh; 
     padding: 2rem;
-
-
-    
     font-size: clamp(0.8rem, 1vw, 2rem);
     background-color: #1b1e20; 
     border: green solid 5px;
     margin: 2rem; /* spaces it away from header */ 
     overflow: auto; 
-
-
 }
 
 .column h2 {
@@ -214,19 +199,17 @@ input[type="radio"].toggle:checked + label {
     display: none;
     position: absolute;
     background-color: #1b1e20;
-    min-width: 4rem;
-    padding: 0.3rem 4em; 
+    min-width: 160px;
+    padding: 12px 16px; 
     z-index:1; 
 }
 
 .dropdown-content a {
-    padding: 0.6rem;
+    padding: 12px;
     display: block;
 }
 
 .dropdown:hover .dropdown-content{
     display:block;
 }
-
-
 
