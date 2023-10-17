@@ -46,8 +46,8 @@ for (const btn of toggleButtons) {
 
 /* SUBPAGE CONTENT */ 
 function updateSubPageContent(buttonValue) {
-  const colHead = document.getElementById('col-head-1');
-  const justificationPara = document.getElementById('justification-para');
+  const colHead = document.getElementByID('col-head-1');
+  const justificationPara = document.getElementByID('justification-para');
 
   if (buttonValue === 'Justification') {
     colHead.textContent = 'Justification';
