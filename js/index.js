@@ -1,3 +1,4 @@
+/* INDEX PAGE TOGGLE BTN / CONTENT */ 
 function replaceText(selector, replacement) {
   const targetNode = document.querySelector(selector);
   if (targetNode) {
@@ -8,8 +9,8 @@ function replaceText(selector, replacement) {
 }
 
 function replaceButtons(){ /* REPLACE COLUMN BUTTONS DEPENDING ON TOGGLE BUTTON*/ 
-  const hideReflections = document.querySelector("#reflection-btns"); 
-  const hideTools = document.querySelector("#tools-btns"); 
+  const hideReflections = document.querySelector(".reflection-btns"); 
+  const hideTools = document.querySelector(".tools-btns"); 
   hideReflections.classList.toggle("hide");
   hideTools.classList.toggle("hide");
 }
@@ -42,3 +43,29 @@ for (const btn of toggleButtons) {
       }
   });
 }
+
+/* SUBPAGE CONTENT */ 
+function updateSubPageContent(buttonValue) {
+  const colHead = document.getElementById('col-head-1');
+  const justificationPara = document.getElementById('justification-para');
+
+  if (buttonValue === 'Justification') {
+    colHead.textContent = 'Justification';
+    justificationPara.textContent = 'Justification content goes here.';
+  } else if (buttonValue === 'Lessons Learned') {
+    colHead.textContent = 'Lessons Learned';
+    justificationPara.textContent = 'Lessons Learned content goes here.';
+  } else if (buttonValue === 'Goals') {
+    colHead.textContent = 'Goals';
+    justificationPara.textContent = 'Goals content goes here.';
+  }
+}
+
+const subpageButtons = document.querySelectorAll('.subpage-btns > a');
+
+subpageButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    const buttonValue = this.textContent.trim();
+    updateSubPageContent(buttonValue);
+  });
+});
