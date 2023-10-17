@@ -99,7 +99,6 @@ input[type="radio"].toggle:checked + label {
 
 
 
-
 /* STYLING THE REST OF THE BUTTONS */ 
 .reflection-btns, .tools-btns {   
     display:flex; 
@@ -107,7 +106,14 @@ input[type="radio"].toggle:checked + label {
     align-items: center;
 }
 
-.header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn{ 
+.subpage-btns
+{
+    display:flex; 
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn, .subpage-btns>a{ 
     font-family: monospace; 
     background-color: green;
     color: white;
@@ -124,12 +130,12 @@ input[type="radio"].toggle:checked + label {
     cursor: pointer;
 }
 
-.header-btns>a:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover {
+.header-btns>a:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover, .subpage-btns>a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.reflection-btns>a, .tool-btns>a {
-    font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
+.reflection-btns>a, .tool-btns>a, .subpage-btns>a{
+    font-size: clamp(0.5rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 
 .header-btns>a, #drop-btn { 
@@ -162,6 +168,7 @@ input[type="radio"].toggle:checked + label {
     border: green solid 5px;
     margin: 2rem; /* spaces it away from header */ 
     overflow: auto; 
+    align-items:center; /* subpage img will always be centered*/
 }
 
 .column h2 {
@@ -179,6 +186,10 @@ input[type="radio"].toggle:checked + label {
     padding: 1rem; 
     flex-shrink:0; 
     overflow:auto; 
+
+    font-size: clamp(0.5rem, 1vw, 3rem);
+
+
 }
 
 
@@ -214,3 +225,19 @@ input[type="radio"].toggle:checked + label {
     display:block;
 }
 
+
+
+/* MAKES BUTTONS LINE VERTICALLY */
+@media only screen and (max-width: 1000px) {
+    .subpage-btns {
+        flex-direction: column; /* change it from row to column */
+    }
+    .subpage-btns > column {
+        padding: 0px 0px 0px 0px;
+        margin: 0px;
+        margin-bottom: 20px !important;
+    }
+}
+.align-bottom {
+    align-self: flex-end !important;
+}
