@@ -1,4 +1,5 @@
-/* INDEX PAGE TOGGLE BTN / CONTENT */ 
+
+/* INDEX PAGE TOGGLE BTN / CONTENT */
 function replaceText(selector, replacement) {
   const targetNode = document.querySelector(selector);
   if (targetNode) {
@@ -8,9 +9,9 @@ function replaceText(selector, replacement) {
   }
 }
 
-function replaceButtons(){ /* REPLACE COLUMN BUTTONS DEPENDING ON TOGGLE BUTTON*/ 
-  const hideReflections = document.querySelector(".reflection-btns"); 
-  const hideTools = document.querySelector(".tools-btns"); 
+function replaceButtons(){ /* REPLACE COLUMN BUTTONS DEPENDING ON TOGGLE BUTTON*/
+  const hideReflections = document.querySelector(".reflection-btns");
+  const hideTools = document.querySelector(".tools-btns");
   hideReflections.classList.toggle("hide");
   hideTools.classList.toggle("hide");
 }
@@ -20,7 +21,7 @@ function updateThenDisplayValues() {
   replaceText("#col-head-1", "Core Value : Privacy");
   replaceText("#col-head-2", "Privacy respecting tools");
   replaceText("#justification-para", "Oftentimes, I get questions as to why I've made my own personal laptop as well as mobile device practically unusable but to me it's the only logical option. I wasn't always like this, I used to have relatively 'normal' tech habits. However, during COVID I fell down a rabbit hole, and I haven't recovered since. I'm used to making my life 'harder' for myself, but that's simply because I've developed stubborn morals, and I feel like if I give up on them I'm giving up on a part of myself. I try to live with intention and do things a specific way because it's fufilling to me, even though it might be seen as an inconvenineince to others. One of my 'values' but I and many others would argue it's a human right is : privacy! I don't have any social media accounts, and have even chosen to abstain from Linkdin even though this will make my career more difficult than necessary; it's something I'm willing to stand by. As everything shifts to the digital realm it's practically impossible to maintain any good level of privacy if you want to participate in modern day society. As a result, I have to make some tradeoffs. I don't expect most people to take as many precautions as I have - and I know there are others who have taken even more.");
-  replaceButtons(); 
+  replaceButtons();
 }
 
 function updateThenDisplayReflections() {
@@ -44,28 +45,46 @@ for (const btn of toggleButtons) {
   });
 }
 
-/* SUBPAGE CONTENT */ 
-function updateSubPageContent(buttonValue) {
-  const colHead = document.getElementById('col-head-1');
-  const justificationPara = document.getElementById('justification-para');
+/* SUBPAGE CONTENT */
+const colHead = document.getElementById('col-head-1');
+const descriptionPara = document.getElementById('description-para');
+const descriptionButton = document.getElementById('description-btn');
+const justificationButton = document.getElementById('justification-btn');
+const lessonsLearnedButton = document.getElementById('lessons-learned-btn');
+const goalsButton = document.getElementById('goals-btn');
 
-  if (buttonValue === 'Justification') {
-    colHead.textContent = 'Justification';
-    justificationPara.textContent = 'Justification content goes here.';
-  } else if (buttonValue === 'Lessons Learned') {
-    colHead.textContent = 'Lessons Learned';
-    justificationPara.textContent = 'Lessons Learned content goes here.';
-  } else if (buttonValue === 'Goals') {
-    colHead.textContent = 'Goals';
-    justificationPara.textContent = 'Goals content goes here.';
-  }
+function updateColumnContent(buttonTitle, buttonValue) {
+    colHead.textContent = buttonTitle;
+    descriptionPara.textContent = buttonValue;
 }
 
-const subpageButtons = document.querySelectorAll('.subpage-btns > a');
+function DisplayDescriptionButton()
+{
+  const descriptionButton = document.getElementById('description-btn');
+  var displaySetting = descriptionButton.style.display;
+      // now toggle depending on current state
+      if (displaySetting != 'block') { // it's hidden which it will be by default so this always enters
+        // hidden --> show it
+        descriptionButton.style.display = 'block';
+        updateColumnContent('Description', 'Description content'); // display appropriate content
+      }
+      else {
+        // buttons visible --> hide it
+        descriptionButton.style.display = 'none';
+      }
+}
 
-subpageButtons.forEach(button => {
-  button.addEventListener('click', function () {
-    const buttonValue = this.textContent.trim();
-    updateSubPageContent(buttonValue);
-  });
+justificationButton.addEventListener('click', function () {
+    updateColumnContent('Justification', 'Justification content');
+    DisplayDescriptionButton();
+});
+
+lessonsLearnedButton.addEventListener('click', function () {
+  updateColumnContent('Lessons Learned', 'Lessons Learned content');
+  DisplayDescriptionButton();
+});
+
+goalsButton.addEventListener('click', function () {
+    updateColumnContent('Goals', 'Goals content');
+    DisplayDescriptionButton();
 });

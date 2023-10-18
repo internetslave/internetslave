@@ -1,0 +1,20 @@
+{
+    "launch": {
+    
+        
+
+        "configurations": [],
+        "compounds": []
+    },
+
+
+    "liveServer.settings.mount": [
+        [
+          "/personal-website",
+          "./",
+        ]
+      ],
+    
+}
+
+
