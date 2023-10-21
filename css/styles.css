@@ -113,7 +113,7 @@ input[type="radio"].toggle:checked + label {
     align-items: center;
 }
 
-.header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn, .subpage-btns>a{ 
+.header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn, .subpage-btns>btn{ 
     font-family: monospace; 
     background-color: green;
     color: white;
@@ -130,11 +130,11 @@ input[type="radio"].toggle:checked + label {
     cursor: pointer;
 }
 
-.header-btns>a:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover, .subpage-btns>a:hover {
+.header-btns>a:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover, .subpage-btns>btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.reflection-btns>a, .tool-btns>a, .subpage-btns>a{
+.reflection-btns>a, .tool-btns>a, .subpage-btns>btn{
     font-size: clamp(0.5rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 

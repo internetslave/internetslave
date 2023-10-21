@@ -45,7 +45,61 @@ for (const btn of toggleButtons) {
   });
 }
 
+
 /* SUBPAGE CONTENT */
+
+
+const h2 = document.querySelector(".column>h2");
+const container = document.querySelector(".subpage-btns"); 
+const subpagePara = document.getElementById('para');
+
+const options = [ 'Description', 'Justification', 'Lessons Learned', 'Goals' ];
+
+let currentOption = 'Description'; // default option
+
+
+function updatePara(updatedPara) {
+  subpagePara.textContent = updatedPara;
+}
+
+renderButtons = () => {
+
+	const currentOptions = options.filter(o => o !== currentOption);
+
+	container.innerHTML = '';
+
+	currentOptions.forEach(opt => {
+  
+  	const subpageBtn = document.createElement('btn');
+    subpageBtn.textContent = opt;
+    subpageBtn.addEventListener('click', () => selectHeader(opt),{
+
+      if(currentOption="Justification"){
+        updatePara('Justification text');
+      }
+
+    });
+
+
+
+		container.append(subpageBtn); // elements appear where you append them
+  });
+	
+};
+
+const selectHeader = option => {
+
+	currentOption = option;
+  h2.textContent = currentOption;
+	renderButtons();
+};
+
+selectHeader(currentOption);
+renderButtons();
+
+
+
+/*
 const colHead = document.getElementById('col-head-1');
 const descriptionPara = document.getElementById('description-para');
 const descriptionButton = document.getElementById('description-btn');
@@ -88,3 +142,5 @@ goalsButton.addEventListener('click', function () {
     updateColumnContent('Goals', 'Goals content');
     DisplayDescriptionButton();
 });
+
+*/ 
