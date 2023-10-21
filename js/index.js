@@ -72,15 +72,20 @@ renderButtons = () => {
   
   	const subpageBtn = document.createElement('btn');
     subpageBtn.textContent = opt;
-    subpageBtn.addEventListener('click', () => selectHeader(opt),{
 
-      if(currentOption="Justification"){
-        updatePara('Justification text');
-      }
+    subpageBtn.addEventListener('click', () => {
+      selectHeader(opt);
 
+      const sections = {
+        "Justification": "Justification text.",
+        "Goals": "Goals text.",
+        "Description": "Description text.",
+        "Lessons Learned": "Lessons learned text.",
+      };
+
+
+      updatePara(sections[currentOption] || sections["Description"]);
     });
-
-
 
 		container.append(subpageBtn); // elements appear where you append them
   });
