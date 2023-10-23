@@ -80,13 +80,13 @@ renderButtons = () => {
         "Description": {
           // location path name(not relative path) - string object property name
           // object property name must match the location path name for the page calling the function
-          "/reflection-subpages/cert-mentor.html" : "Description text for cert.",
+          "/reflection-subpages/lead-mentor.html" : "Description text for cert.",
           "/reflection-subpages/code-dojo.html": "Description text for code.",
           "/reflection-subpages/course-rep.html": "Description text for course.",
           "/reflection-subpages/grads4nottm.html": "Description text for grads.",
           "/reflection-subpages/it-support.html": "Description text for it.",
-          "/reflection-subpages/library-student-mentor.html": "Description text for library.",
-          "/reflection-subpages/outreach-ambassador.html": "Description text for outreach.",
+          "/reflection-subpages/library-mentor.html": "Description text for library.",
+          "/reflection-subpages/outreach.html": "Description text for outreach.",
           "/reflection-subpages/this-website.html": "Description text for website.",
           "/reflection-subpages/trinity.html": "Description text for trinity.",
 
@@ -98,13 +98,13 @@ renderButtons = () => {
 
         },
         "Justification": {
-          "/reflection-subpages/cert-mentor.html": "Justification text for cert.",
+          "/reflection-subpages/lead-mentor.html": "Justification text for cert.",
           "/reflection-subpages/code-dojo.html": "Justification text for code.",
           "/reflection-subpages/course-rep.html": "Justification text for course.",
           "/reflection-subpages/grads4nottm.html": "Justification text for grads.",
           "/reflection-subpages/it-support.html": "Justification text for it.",
-          "/reflection-subpages/library-student-mentor.html": "Justification text for library.",
-          "/reflection-subpages/outreach-ambassador.html": "Justification text for outreach.",
+          "/reflection-subpages/library-mentor.html": "Justification text for library.",
+          "/reflection-subpages/outreach.html": "Justification text for outreach.",
           "/reflection-subpages/this-website.html": "Justification text for website.",
           "/reflection-subpages/trinity.html": "Justification text for trinity.",
 
@@ -117,13 +117,13 @@ renderButtons = () => {
         },
 
         "Lessons Learned": {
-          "/reflection-subpages/cert-mentor.html": "Lessons text for cert.",
+          "/reflection-subpages/lead-mentor.html": "Lessons text for cert.",
           "/reflection-subpages/code-dojo.html": "Lessons text for code.",
           "/reflection-subpages/course-rep.html": "Lessons text for course.",
           "/reflection-subpages/grads4nottm.html": "Lessons text for grads.",
           "/reflection-subpages/it-support.html": "Lessons text for it.",
-          "/reflection-subpages/library-student-mentor.html": "Lessons text for library.",
-          "/reflection-subpages/outreach-ambassador.html": "Lessons text for outreach.",
+          "/reflection-subpages/library-mentor.html": "Lessons text for library.",
+          "/reflection-subpages/outreach.html": "Lessons text for outreach.",
           "/reflection-subpages/this-website.html": "Lesssons text for website.",
           "/reflection-subpages/trinity.html": "Lessons text for trinity.",
 
@@ -135,13 +135,13 @@ renderButtons = () => {
         },
 
         "Goals": {
-          "/reflection-subpages/cert-mentor.html": "Goals text for cert.",
+          "/reflection-subpages/lead-mentor.html": "Goals text for cert.",
           "/reflection-subpages/code-dojo.html": "Goals text for code.",
           "/reflection-subpages/course-rep.html": "Goals text for course.",
           "/reflection-subpages/grads4nottm.html": "Goals text for grads.",
           "/reflection-subpages/it-support.html": "Goals text for it.",
-          "/reflection-subpages/library-student-mentor.html": "Goals text for library.",
-          "/reflection-subpages/outreach-ambassador.html": "Goals text for outreach.",
+          "/reflection-subpages/library-mentor.html": "Goals text for library.",
+          "/reflection-subpages/outreach.html": "Goals text for outreach.",
           "/reflection-subpages/this-website.html": "Goals text for website.",
           "/reflection-subpages/trinity.html": "Goals text for trinity.",
 

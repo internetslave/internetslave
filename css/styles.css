@@ -121,6 +121,7 @@ input[type="radio"].toggle:checked + label {
     text-decoration:none;   
     gap: 2.5rem; 
     margin:1rem; 
+    
     padding: 0.6rem; 
     border-radius: 8px; 
     border: 2px solid white;
@@ -218,7 +219,7 @@ input[type="radio"].toggle:checked + label {
     padding: 5%; /* spacing between each button*/ 
     display: block;
     font-size: clamp(0.2rem, 1vw, 2rem); 
-
+    
 }
 
 .dropdown:hover .dropdown-content{
