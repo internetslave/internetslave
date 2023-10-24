@@ -13,27 +13,46 @@
 .header  { /* nested flex container*/ 
     display:flex; 
     justify-content:center; 
-    align-items: center; 
+    align-items: center;    
     height: 15vh; /* layout fits on one page - no scrolling necessary*/
     width: 100%; 
     background-color: #1b1e20; 
 }
 
-.reflection-btns, .tools-btns {   /* style buttons all together = consistency */ 
-    display:flex; 
-    flex-direction:column; 
+.header-btns{
+    display:flex;
     align-items: center;
 }
 
-.reflection-btns>a, .tool-btns>a {
-    font-size: clamp(0.8rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
+
+ /* STYLING INTERNETSLAVE */ 
+.header h1 {  
+    color: white; 
+    font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
+    overflow: hidden; /* content not revealed until animation */
+    /* make all lengths ems - so it depends on font size */ 
+    border-right: .15rem solid green; /* typwriter cursor */
+    white-space: nowrap; /*content on a single line */
+    margin: 7.6%; /*scrolling effect as the typing happens */
+    letter-spacing: .15rem; 
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
 }
 
-.header-btns>button, #drop-btn { /* styles toggle button */ 
-    font-size: clamp(0.2rem, 2vw, 3rem); 
+@keyframes typing { /*typing effect*/ 
+    from { width: 0 }
+    to { width: 30% }
 }
 
-#toggle-btn {
+@keyframes blink-caret { /* typewriter cursor effect */ 
+    from, to { border-color: transparent }
+    30% { border-color: green }
+}
+
+
+/* STYLING REFLECTIONS/VALUES BUTTON */ 
+#toggle-btn { 
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     background: white;
@@ -71,7 +90,23 @@ input[type="radio"].toggle:checked + label {
     color: white;
 }
   
-.header-btns>button, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn{ 
+
+
+/* STYLING THE REST OF THE BUTTONS */ 
+.reflection-btns, .tools-btns {   
+    display:flex; 
+    flex-direction:column; 
+    align-items: center;
+}
+
+.subpage-btns
+{
+    display:flex; 
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn, .subpage-btns>btn{ 
     font-family: monospace; 
     background-color: green;
     color: white;
@@ -79,7 +114,8 @@ input[type="radio"].toggle:checked + label {
     text-decoration:none;   
     gap: 2.5rem; 
     margin:1rem; 
-    padding: 0.5rem; 
+    
+    padding: 0.6rem; 
     border-radius: 8px; 
     border: 2px solid white;
     border-width: 2px; 
@@ -88,48 +124,36 @@ input[type="radio"].toggle:checked + label {
     cursor: pointer;
 }
 
-.header-btns>button:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover {
+.header-btns>a:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover, .subpage-btns>btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.hide /* hiding irrelevant buttons that aren't associated with toggle*/ 
-{
-    display:none; 
+.reflection-btns>a, .tool-btns>a, .subpage-btns>btn{
+    font-size: clamp(0.5rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
 }
 
-.header h1 {   /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
-    color: white; 
-    font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
-    overflow: hidden; /* content not revealed until animation */
-    /* make all lengths ems - so it depends on font size */ 
-    border-right: .15rem solid green; /* typwriter cursor */
-    white-space: nowrap; /*content on a single line */
-    margin: 7.6%; /*scrolling effect as the typing happens */
-    letter-spacing: .15rem; 
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
+.header-btns>a, #drop-btn { 
+    font-size: clamp(0.2rem, 1vw, 2rem); 
 }
 
-@keyframes typing { /*typing effect*/ 
-    from { width: 0 }
-    to { width: 30% }
+.hide {  
+    display:none; /* hiding irrelevant buttons that aren't associated with toggle*/ 
 }
 
-@keyframes blink-caret { /* typewriter cursor effect */ 
-    from, to { border-color: transparent }
-    30% { border-color: green }
-}
 
-.vertical-flex-container { /*parent flex for main content */ 
-    display: flex;
+
+
+
+/* STYLING FLEXBOX COLUMNS */ 
+.vertical-flex-container { 
+    display: flex; /*parent flex for main content */ 
     justify-content:center;
 }
 
 .column { /* child of vertical flex container */ 
     display:flex; 
     flex-direction:column; 
-    width: 30%;
+    width: 32.5%;
     height: 65vh; 
     padding: 2rem;
     font-size: clamp(0.8rem, 1vw, 2rem);
@@ -137,6 +161,7 @@ input[type="radio"].toggle:checked + label {
     border: green solid 5px;
     margin: 2rem; /* spaces it away from header */ 
     overflow: auto; 
+    align-items:center; /* subpage img will always be centered*/
 }
 
 .column h2 {
@@ -154,9 +179,12 @@ input[type="radio"].toggle:checked + label {
     padding: 1rem; 
     flex-shrink:0; 
     overflow:auto; 
+    font-size: clamp(0.5rem, 1vw, 3rem);
 }
 
-.dropdown{ /* DROPDOWN MENU FOR SUBPAGES*/ 
+
+/* STYLING SUBPAGE DROPDOWN BUTTON*/
+.dropdown{  
     position: relative;
     display: inline-block;
 }
@@ -165,16 +193,30 @@ input[type="radio"].toggle:checked + label {
     display: none;
     position: absolute;
     background-color: #1b1e20;
-    min-width: 160px;
-    padding: 12px 16px; 
     z-index:1; 
+    min-width: 90%;
 }
 
 .dropdown-content a {
-    padding: 12px;
     display: block;
+    font-size: clamp(0.2rem, 1vw, 2rem); 
 }
 
 .dropdown:hover .dropdown-content{
     display:block;
+}
+
+/* MAKES BUTTONS LINE VERTICALLY */
+@media only screen and (max-width: 1000px) {
+    .subpage-btns {
+        flex-direction: column; /* change it from row to column */
+    }
+    .subpage-btns > column {
+        padding: 0px 0px 0px 0px;
+        margin: 0px;
+        margin-bottom: 20px !important;
+    }
+}
+.align-bottom {
+    align-self: flex-end !important;
 }
