@@ -12,8 +12,6 @@ It's obviously not complete, as designs change continously, and plans change but
 
 
 *Used git:made branches for specific features (example pr)
-![Pull Request](/home/user1/Downloads/internetslave/img/pull-request.png)
-
 
 ## Navigation
 
