@@ -13,8 +13,7 @@
 .header  { /* nested flex container*/ 
     display:flex; 
     justify-content:center; 
-    align-items: center; 
-    
+    align-items: center;    
     height: 15vh; /* layout fits on one page - no scrolling necessary*/
     width: 100%; 
     background-color: #1b1e20; 
@@ -24,9 +23,6 @@
     display:flex;
     align-items: center;
 }
-
-
-
 
 
  /* STYLING INTERNETSLAVE */ 
@@ -53,8 +49,6 @@
     from, to { border-color: transparent }
     30% { border-color: green }
 }
-
-
 
 
 /* STYLING REFLECTIONS/VALUES BUTTON */ 
@@ -96,7 +90,6 @@ input[type="radio"].toggle:checked + label {
     color: white;
 }
   
-
 
 
 /* STYLING THE REST OF THE BUTTONS */ 
@@ -151,7 +144,6 @@ input[type="radio"].toggle:checked + label {
 
 
 
-
 /* STYLING FLEXBOX COLUMNS */ 
 .vertical-flex-container { 
     display: flex; /*parent flex for main content */ 
@@ -187,18 +179,8 @@ input[type="radio"].toggle:checked + label {
     padding: 1rem; 
     flex-shrink:0; 
     overflow:auto; 
-
     font-size: clamp(0.5rem, 1vw, 3rem);
-
-
 }
-
-
-
-
-
-
-
 
 
 /* STYLING SUBPAGE DROPDOWN BUTTON*/
@@ -211,22 +193,18 @@ input[type="radio"].toggle:checked + label {
     display: none;
     position: absolute;
     background-color: #1b1e20;
-    padding: 4%, 8%; 
     z-index:1; 
+    min-width: 90%;
 }
 
 .dropdown-content a {
-    padding: 5%; /* spacing between each button*/ 
     display: block;
     font-size: clamp(0.2rem, 1vw, 2rem); 
-    
 }
 
 .dropdown:hover .dropdown-content{
     display:block;
 }
-
-
 
 /* MAKES BUTTONS LINE VERTICALLY */
 @media only screen and (max-width: 1000px) {
