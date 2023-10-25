@@ -46,8 +46,7 @@ for (const btn of toggleButtons) {
 }
 
 
-/* SUBPAGE CONTENT */
-
+/* SUBPAGE TEXT CONTENT */
 
 const h2 = document.querySelector(".column>h2");
 const container = document.querySelector(".subpage-btns"); 
@@ -176,3 +175,22 @@ const selectHeader = option => {
 
 selectHeader(currentOption);
 renderButtons();
+
+
+/* SUBPAGE MODAL IMAGES */ 
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("myImg"); // get img
+var modalImg = document.getElementById("modal-img");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block"; 
+  modalImg.src = this.src; // insert img inside of modal 
+  captionText.innerHTML = this.alt; // use alt text as caption
+}
+
+var span = document.getElementsByClassName("close")[0]; /* get span element(X) that closes modal*/ 
+
+span.onclick = function() { /* when user clicks on x button close modal */ 
+  modal.style.display = "none";
+}
