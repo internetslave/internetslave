@@ -32,19 +32,17 @@ function updateThenDisplayReflections() {
   replaceButtons();
 }
 
-const toggleButtons = document.querySelectorAll('#toggle-btn > input'); //click event listener to button
-console.log(toggleButtons);
+const toggleBtns = document.querySelectorAll('#toggle-btn > input');
 
-for (const btn of toggleButtons) {
-  btn.addEventListener('click', () => {
-      if (document.querySelector('input[name="toggle"]:checked').value === 'Values') {
-          updateThenDisplayValues();
-      } else {
-          updateThenDisplayReflections();
-      }
+for (const btn of toggleBtns) {
+  btn.addEventListener('change', () => {
+    if (btn.textContent === 'Values') {
+      updateThenDisplayValues();
+    } else {
+      updateThenDisplayReflections();
+    }
   });
 }
-
 
 /* SUBPAGE TEXT CONTENT */
 
@@ -54,6 +52,8 @@ const subpagePara = document.getElementById('para');
 
 const options = [ 'Description', 'Justification', 'Lessons Learned', 'Goals' ];
 
+
+// THIS SHOULD ONLY BE THE DEFAULT OPTION ON THE INDEX SUBPAGES HOW DO I MAKE IT SO ITS LIKE THAT
 let currentOption = 'Description'; // default option
 
 
