@@ -17,16 +17,20 @@
     height: 15vh; /* layout fits on one page - no scrolling necessary*/
     width: 100%; 
     background-color: #1b1e20; 
+
 }
 
 .header-btns{
-    display:flex;
-    align-items: center;
+    display: flex;
+    align-items: center; /* aligns it in the center of the header*/ 
+
+    /* position: fixed / absolute; doesn't work  */ 
+
 }
 
 
- /* STYLING INTERNETSLAVE */ 
-.header h1 {  
+ /* typewriter effect on index page*/ 
+.typewriter {  
     color: white; 
     font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
     overflow: hidden; /* content not revealed until animation */
@@ -49,6 +53,15 @@
     from, to { border-color: transparent }
     30% { border-color: green }
 }
+
+.header h1{ /* subpage heading (no typing effect) */ 
+    color: white; 
+    font-size: clamp(0.5em, 3vw, 5rem); 
+    letter-spacing: .15rem; 
+    margin: 7.6%;
+}
+
+
 
 
 /* STYLING REFLECTIONS/VALUES BUTTON */ 
