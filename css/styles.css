@@ -1,78 +1,103 @@
-:root  {  /* applies to the entire thing, overrides everything*/
-    background-color: black; 
-    font-family: monospace; 
+:root {
+    /* applies to the entire thing, overrides everything*/
+    background-color: black;
+    font-family: monospace;
 }
 
-.body { /* parent container */
+.body {
+    /* parent container */
     display: flex;
-    flex-direction: column; 
-    min-height: 100vh; /* layout takes full height of viewport screen */ 
+    flex-direction: column;
+    min-height: 100vh;
+    /* layout takes full height of viewport screen */
     min-width: 100vw;
 }
 
-.header  { /* nested flex container*/ 
-    display:flex; 
-    justify-content:center; 
-    align-items: center;    
-    height: 15vh; /* layout fits on one page - no scrolling necessary*/
-    width: 100%; 
-    background-color: #1b1e20; 
-
-}
-
-.header-btns{
+.header {
+    /* nested flex container*/
     display: flex;
-    align-items: center; /* aligns it in the center of the header*/ 
-
-    /* position: fixed / absolute; doesn't work  */ 
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    /* layout fits on one page - no scrolling necessary*/
+    width: 100%;
+    background-color: #1b1e20;
 
 }
 
 
- /* typewriter effect on index page*/ 
-.typewriter {  
-    color: white; 
-    font-size: clamp(0.5em, 3vw, 5rem); /* built in function that allows text to grow/shrink with viewport*/
-    overflow: hidden; /* content not revealed until animation */
-    /* make all lengths ems - so it depends on font size */ 
-    border-right: .15rem solid green; /* typwriter cursor */
-    white-space: nowrap; /*content on a single line */
-    margin: 7.6%; /*scrolling effect as the typing happens */
-    letter-spacing: .15rem; 
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
+
+.header-btns {
+    display: flex;
+    align-items: center;
+
 }
 
-@keyframes typing { /*typing effect*/ 
-    from { width: 0 }
-    to { width: 30% }
+
+/* typewriter effect on index page*/
+.typewriter {
+    color: white;
+    font-size: clamp(0.5em, 3vw, 5rem);
+    /* built in function that allows text to grow/shrink with viewport*/
+    overflow: hidden;
+    /* content not revealed until animation */
+    /* make all lengths ems - so it depends on font size */
+    border-right: .15rem solid green;
+    /* typwriter cursor */
+    white-space: nowrap;
+    /*content on a single line */
+    margin: 7.6%;
+    /*scrolling effect as the typing happens */
+    letter-spacing: .15rem;
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
 }
 
-@keyframes blink-caret { /* typewriter cursor effect */ 
-    from, to { border-color: transparent }
-    30% { border-color: green }
+@keyframes typing {
+
+    from {
+        width: 0
+    }
+
+    to {
+        width: 30%
+    }
 }
 
-.header h1{ /* subpage heading (no typing effect) */ 
-    color: white; 
-    font-size: clamp(0.5em, 3vw, 5rem); 
-    letter-spacing: .15rem; 
+@keyframes blink-caret {
+
+    /* typewriter cursor effect */
+    from,
+    to {
+        border-color: transparent
+    }
+
+    30% {
+        border-color: green
+    }
+}
+
+.header h1 {
+    /* subpage heading (no typing effect) */
+    color: white;
+    font-size: clamp(0.5em, 3vw, 5rem);
+    letter-spacing: .15rem;
     margin: 7.6%;
 }
 
 
 
 
-/* STYLING REFLECTIONS/VALUES BUTTON */ 
-#toggle-btn { 
+/* STYLING REFLECTIONS/VALUES BUTTON */
+#toggle-btn {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     background: white;
     font-size: clamp(0.7rem, 1.7vw, 2rem);
-    border-radius: 4px; 
+    border-radius: 4px;
     border: 2px solid white;
-    border-width: 2px; 
+    border-width: 2px;
     box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
     transition-duration: 0.4s;
     cursor: pointer;
@@ -81,123 +106,141 @@
 input[type="radio"].toggle {
     display: none;
 }
-  
-input[type="radio"].toggle + label {
+
+input[type="radio"].toggle+label {
     cursor: pointer;
     padding: 0.8rem;
-    border-radius:4px; 
+    border-radius: 4px;
 }
-  
-input[type="radio"].toggle + label:hover {
+
+input[type="radio"].toggle+label:hover {
     color: green;
 }
-  
-input[type="radio"].toggle:checked + label {
+
+input[type="radio"].toggle:checked+label {
     cursor: default;
     color: black;
     transition: color 200ms;
 }
-  
-input[type="radio"].toggle:checked + label {
+
+input[type="radio"].toggle:checked+label {
     background: green;
     color: white;
 }
-  
 
 
-/* STYLING THE REST OF THE BUTTONS */ 
-.reflection-btns, .tools-btns {   
-    display:flex; 
-    flex-direction:column; 
+
+/* STYLING THE REST OF THE BUTTONS */
+.reflection-btns,
+.tools-btns {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.subpage-btns
-{
-    display:flex; 
+.subpage-btns {
+    display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.header-btns>a, .reflection-btns>a, .tools-btns>a, .dropdown-content>a, #drop-btn, .subpage-btns>btn{ 
-    font-family: monospace; 
+.header-btns>a,
+.reflection-btns>a,
+.tools-btns>a,
+.dropdown-content>a,
+#drop-btn,
+.subpage-btns>btn {
+    font-family: monospace;
     background-color: green;
     color: white;
-    text-align:center;
-    text-decoration:none;   
-    gap: 2.5rem; 
-    margin:1rem; 
-    
-    padding: 0.6rem; 
-    border-radius: 8px; 
+    text-align: center;
+    text-decoration: none;
+    gap: 2.5rem;
+    margin: 1rem;
+
+    padding: 0.6rem;
+    border-radius: 8px;
     border: 2px solid white;
-    border-width: 2px; 
+    border-width: 2px;
     box-shadow: 0 4px 8px 0 rgba(249, 247, 247, 0.414);
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
-.header-btns>a:hover, .reflection-btns>a:hover, .tools-btns>a:hover, .dropdown-content>a:hover, .subpage-btns>btn:hover {
+.header-btns>a:hover,
+.reflection-btns>a:hover,
+.tools-btns>a:hover,
+.dropdown-content>a:hover,
+.subpage-btns>btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.reflection-btns>a, .tool-btns>a, .subpage-btns>btn{
-    font-size: clamp(0.5rem, 1vw, 2rem); /* rem - relative to browser based fontsize*/ 
+.reflection-btns>a,
+.tool-btns>a,
+.subpage-btns>btn {
+    font-size: clamp(0.5rem, 1vw, 2rem);
+    /* rem - relative to browser based fontsize*/
 }
 
-.header-btns>a, #drop-btn { 
-    font-size: clamp(0.2rem, 1vw, 2rem); 
+.header-btns>a,
+#drop-btn {
+    font-size: clamp(0.2rem, 1vw, 2rem);
 }
 
-.hide {  
-    display:none; /* hiding irrelevant buttons that aren't associated with toggle*/ 
+.hide {
+    display: none;
+    /* hiding irrelevant buttons that aren't associated with toggle*/
 }
 
 
 
 
 
-/* STYLING FLEXBOX COLUMNS */ 
-.vertical-flex-container { 
-    display: flex; /*parent flex for main content */ 
-    justify-content:center;
+/* STYLING FLEXBOX COLUMNS */
+.vertical-flex-container {
+    /*parent flex for main content */
+    display: flex;
+    justify-content: center;
 }
 
-.column { /* child of vertical flex container */ 
-    display:flex; 
-    flex-direction:column; 
+.column {
+    /* child of vertical flex container */
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 65vh; 
+    height: 65vh;
     padding: 2rem;
     font-size: clamp(0.8rem, 1vw, 2rem);
-    background-color: #1b1e20; 
+    background-color: #1b1e20;
     border: green solid 5px;
-    margin: 2rem; /* spaces it away from header */ 
-    overflow: auto; 
-    align-items:center; /* subpage img will always be centered*/
+    margin: 2rem;
+    /* spaces it away from header */
+    overflow: auto;
+    align-items: center;
 }
 
 .column h2 {
     font-size: clamp(1rem, 2vw, 3rem);
-    color: white; 
-    text-decoration: underline; 
-    text-align: center; 
+    color: white;
+    text-decoration: underline;
+    text-align: center;
 }
 
-.column p { /* justification paragraph for why I reflect */ 
-    background-color: black; 
-    color: green; 
+.column p {
+    /* justification paragraph for why I reflect */
+    background-color: black;
+    color: green;
     text-align: center;
-    flex-wrap: nowrap; 
-    padding: 1rem; 
-    flex-shrink:0; 
-    overflow:auto; 
+    flex-wrap: nowrap;
+    padding: 1rem;
+    flex-shrink: 0;
+    overflow: auto;
     font-size: clamp(0.5rem, 1vw, 3rem);
 }
 
 
 /* STYLING SUBPAGE DROPDOWN BUTTON*/
-.dropdown{  
+.dropdown {
     position: relative;
     display: inline-block;
 }
@@ -206,66 +249,76 @@ input[type="radio"].toggle:checked + label {
     display: none;
     position: absolute;
     background-color: #1b1e20;
-    z-index:1; 
+    z-index: 1;
     min-width: 90%;
 }
 
 .dropdown-content a {
     display: block;
-    font-size: clamp(0.2rem, 1vw, 2rem); 
+    font-size: clamp(0.2rem, 1vw, 2rem);
 }
 
-.dropdown:hover .dropdown-content{
-    display:block;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* MAKES BUTTONS LINE VERTICALLY */
 @media only screen and (max-width: 1000px) {
     .subpage-btns {
-        flex-direction: column; /* change it from row to column */
+        flex-direction: column;
+        /* change it from row to column */
     }
-    .subpage-btns > column {
+
+    .subpage-btns>column {
         padding: 0px 0px 0px 0px;
         margin: 0px;
         margin-bottom: 20px !important;
     }
 }
+
 .align-bottom {
     align-self: flex-end !important;
 }
 
 
-/* MODAL */ 
+/* MODAL */
 #myImg {
     cursor: pointer;
     transition: 0.3s;
-  }
+}
 
-  #myImg:hover {opacity: 0.2;} /* makes it obvious you can click on it*/ 
-  
-  .modal { /* background*/ 
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 2rem; 
+#myImg:hover{
+    /* makes it obvious you can click on it*/
+    opacity: 0.2;
+}
+
+
+.modal {
+    /* background*/
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 2rem;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0,0.9); /* colour outside of modal - can still see subpage*/
-  }
-  
-  .modal-content { /* image */ 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.9);
+    /* colour outside of modal - can still see subpage*/
+}
+
+.modal-content {
+    /* image */
     margin: auto;
     display: block;
     width: 80%;
     max-width: 50%;
 
     border: 0.5rem solid green;
-  }
-  
-  #caption {
+}
+
+#caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -275,26 +328,39 @@ input[type="radio"].toggle:checked + label {
     color: white;
     padding: 1rem;
     height: 20%;
-  }
-  
-  .modal-content, #caption {   /* animation*/ 
+}
+
+.modal-content,
+#caption {
+    /* animation*/
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
-  }
-  
-  @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-  }
-  
-  .close { /* x button*/ 
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    /* x button*/
     position: absolute;
     top: 15px;
     right: 35px;
@@ -302,17 +368,17 @@ input[type="radio"].toggle:checked + label {
     font-size: clamp(0.5em, 3vw, 5rem);
     font-weight: bold;
     transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: white;
     text-decoration: none;
     cursor: pointer;
-  }
-  
-  @media only screen and (max-width: 700px){ 
+}
+
+@media only screen and (max-width: 700px) {
     .modal-content {
-      width: 100%;
+        width: 100%;
     }
-  }
+}

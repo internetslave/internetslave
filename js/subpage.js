@@ -1,13 +1,10 @@
 const h2 = document.querySelector(".column>h2");
-const container = document.querySelector(".subpage-btns"); 
+const container = document.querySelector(".subpage-btns");
 const subpagePara = document.getElementById('para');
 
-const options = [ 'Description', 'Justification', 'Lessons Learned', 'Goals' ];
+const options = ['Description', 'Justification', 'Lessons Learned', 'Goals'];
 
-
-// THIS SHOULD ONLY BE THE DEFAULT OPTION ON THE INDEX SUBPAGES HOW DO I MAKE IT SO ITS LIKE THAT
 let currentOption = 'Description'; // default option
-
 
 function updatePara(updatedPara) {
   subpagePara.textContent = updatedPara;
@@ -15,13 +12,13 @@ function updatePara(updatedPara) {
 
 renderButtons = () => {
 
-	const currentOptions = options.filter(o => o !== currentOption);
+  const currentOptions = options.filter(o => o !== currentOption);
 
-	container.innerHTML = '';
+  container.innerHTML = '';
 
-	currentOptions.forEach(opt => {
-  
-  	const subpageBtn = document.createElement('btn');
+  currentOptions.forEach(opt => {
+
+    const subpageBtn = document.createElement('btn');
     subpageBtn.textContent = opt;
 
     subpageBtn.addEventListener('click', () => {
@@ -29,11 +26,11 @@ renderButtons = () => {
 
       const sections = {
 
-        
+
         "Description": {
           // location path name(not relative path) - string object property name
           // object property name must match the location path name for the page calling the function
-          "/reflection-subpages/lead-mentor.html" : "Description text for cert.",
+          "/reflection-subpages/lead-mentor.html": "Description text for cert.",
           "/reflection-subpages/code-dojo.html": "Description text for code.",
           "/reflection-subpages/course-rep.html": "Description text for course.",
           "/reflection-subpages/grads4nottm.html": "Description text for grads.",
@@ -109,43 +106,39 @@ renderButtons = () => {
       };
 
       const pathName = Object.keys(sections[currentOption || "Description"]).find(path => location.pathname.endsWith(path));
-      updatePara(sections[currentOption][pathName]  || sections["Description"][pathName]);
+      updatePara(sections[currentOption][pathName] || sections["Description"][pathName]);
 
     });
 
-		container.append(subpageBtn); // elements appear where you append them
+    container.append(subpageBtn); // elements appear where you append them
   });
-	
+
 };
 
 const selectHeader = option => {
 
-	currentOption = option;
+  currentOption = option;
   h2.textContent = currentOption;
-	renderButtons();
+  renderButtons();
 };
 
 selectHeader(currentOption);
 renderButtons();
 
-
-
-
-
-/* SUBPAGE MODAL IMAGES */ 
+/* SUBPAGE MODAL IMAGES */
 var modal = document.getElementById("myModal");
 
 var img = document.getElementById("myImg"); // get img
 var modalImg = document.getElementById("modal-img");
 var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block"; 
+img.onclick = function () {
+  modal.style.display = "block";
   modalImg.src = this.src; // insert img inside of modal 
   captionText.innerHTML = this.alt; // use alt text as caption
 }
 
-var span = document.getElementsByClassName("close")[0]; /* get span element(X) that closes modal*/ 
+var span = document.getElementsByClassName("close")[0]; /* get span element(X) that closes modal*/
 
-span.onclick = function() { /* when user clicks on x button close modal */ 
+span.onclick = function () { /* when user clicks on x button close modal */
   modal.style.display = "none";
 }

@@ -1,13 +1,13 @@
 function replaceText(selector, replacement) {
   const targetNode = document.querySelector(selector);
   if (targetNode) {
-      targetNode.innerText = replacement;
+    targetNode.innerText = replacement;
   } else {
-      console.error(`Failed to replace ${selector}: No element matching the selector exists.`)
+    console.error(`Failed to replace ${selector}: No element matching the selector exists.`)
   }
 }
 
-function replaceButtons(){ /* REPLACE COLUMN BUTTONS DEPENDING ON TOGGLE BUTTON*/
+function replaceButtons() { /* REPLACE COLUMN BUTTONS DEPENDING ON TOGGLE BUTTON*/
   const hideReflections = document.querySelector(".reflection-btns");
   const hideTools = document.querySelector(".tools-btns");
   hideReflections.classList.toggle("hide");
