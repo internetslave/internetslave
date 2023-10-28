@@ -1,14 +1,14 @@
-
 ## Workflow
 Despite the fact that I quickly hacked this together, and was only working on it myself I tried to simulate an actual professional environment to the best of my abilities.
 
-* Figma: Initially made a rought draft design, obviously it has changed a little bit but that is natural as things never go according to plan usually.
-![Figma ](/home/user1/Downloads/internetslave/img/figma.png)
+* Figma: Initially used it to design a rought draft, however it has changed - the navigation buttons are now on the left. However, I only decided to make this change once I was well into the coding process and left the design phase so it was useless to readjust it in Figma after the fact.
+![figma](https://github.com/internetslave/personal-website/assets/80433265/69e7ee58-6455-48ce-b67f-1dec226cf428)
 
-* Jira: usedto keep track of tasks to do
-![Jira task](/home/user1/Downloads/internetslave/img/jira.png)
+* Jira: used it to keep track of tasks
+![jira](https://github.com/internetslave/personal-website/assets/80433265/37d23dcf-3510-4727-8f94-bddea6d54f5c)
 
 * Git: Made branch for each new feature – merged it into main (always had currently working version) as main. 
+
 
 
 ## Justification
