@@ -1,17 +1,14 @@
 
 ## Workflow
-Despite the fact that I quickly hacked this together, and was only working on it myself I tried to simulate an actual professional environment to the best of my abilities / within reason. 
+Despite the fact that I quickly hacked this together, and was only working on it myself I tried to simulate an actual professional environment to the best of my abilities.
 
-* FIGMA: tried to make figma design (ss of figma)
-It's obviously not complete, as designs change continously, and plans change but it's more of a rough draft.
+* Figma: Initially made a rought draft design, obviously it has changed a little bit but that is natural as things never go according to plan usually.
 ![Figma ](/home/user1/Downloads/internetslave/img/figma.png)
 
-
-*JIRA:to keep track of tasks to do (ss of jira)
+* Jira: usedto keep track of tasks to do
 ![Jira task](/home/user1/Downloads/internetslave/img/jira.png)
 
-
-*Used git: Made branch for each new feature – merged it into main (always had currently working version) as main. 
+* Git: Made branch for each new feature – merged it into main (always had currently working version) as main. 
 
 
 ## Justification
