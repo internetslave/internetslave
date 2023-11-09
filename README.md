@@ -14,13 +14,12 @@ Despite the fact that I quickly hacked this together, and was only working on it
 
 
 ## Future Improvements
-<ins>Create a dedicated Blog section: </ins>\
-I’ve done a lot of writing, and plan to do more in the future. Transforming part of the website into a full fledge blog is better than just stuffing a bunch of text in flexboxes - this approach isn't visually appealing for long form text content.
-
-<ins> Use React:</ins>\
+<ins> Rewrite with React:</ins>\
 The current home page's toggle button causes different navigation buttons to populate the flexbox columns depending on the header clicked (it dynamically changes the content without refreshing the page). I wrote it using vanilla Javascript which made it extremely complicated. In the future, I should use React as it was initially created to solve the challenges associated with SPAs(Single Page Applications). 
 
- <ins> Create an interactive timeline that displays my coding journey so far: </ins>
- * links to every previous coding project and provides reflections on it 
+ <ins> Create an interactive timeline that displays my coding journey so far: </ins>\
+ It would link to every previous coding project and provide reflections on it (date completed) etc. 
 
+<ins>Create a dedicated Blog section: </ins>\
+I’ve done a lot of writing, and plan to do more in the future. Transforming part of the website into a full fledge blog is better than just stuffing a bunch of text in flexboxes - this approach isn't visually appealing for long form text content.
 
